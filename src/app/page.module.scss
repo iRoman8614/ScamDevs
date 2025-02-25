@@ -10,6 +10,19 @@
   font-size: auto-clamp(0, 660);
   line-height: auto-clamp(0, 500);
   padding-top: auto-clamp(20, 50);
+  display: inline-block;
+  transform-origin: left;
+  animation: squeeze 8s infinite;
+  height: fit-content;
+}
+
+@keyframes squeeze {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.75);
+  }
 }
 
 .T {
@@ -22,15 +35,27 @@
 }
 
 .textBig {
+  display: inline-block;
   font-size: auto-clamp(0, 356);
-  line-height: auto-clamp(0, 320);
+  line-height: auto-clamp(0, 200);
   z-index: 3;
+  transform-origin: top;
+  animation: stretch 6s infinite;
+}
+
+@keyframes stretch {
+  0%, 100% {
+    transform: scaleY(1); // начальное и конечное состояние, высота не изменена
+  }
+  50% {
+    transform: scaleY(1.3); // в середине анимации высота увеличена на 50%
+  }
 }
 
 .textCode {
   color: #FFFFFF;
   font-size: auto-clamp(0, 460);
-  line-height: auto-clamp(0, 400);
+  line-height: auto-clamp(0, 300);
   margin-left: -5%;
   z-index: 2;
 }
@@ -50,12 +75,44 @@
     color: black;
     opacity: 0.5;
     transition: opacity 0.3s ease;
+    animation: moveLeft 4s infinite linear
   }
 
   .secondFast {
     color: black;
     left: 10px;
     opacity: 0.5;
+    animation: moveRight 4s infinite linear
+  }
+}
+
+@keyframes moveRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+}
+
+@keyframes moveLeft {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(3px);
   }
 }
 
