@@ -32,13 +32,54 @@ export default function Home() {
                     <div className={styles.pinkPixel5}></div>
                 </div>
             </div>
-            <div id={'services'}>
-                <div>we offer</div>
-                <div>text</div>
-                <div>technologis</div>
-                <div>tma text</div>
-                <div>text more</div>
-                <div>slider</div>
+            <div className={styles.serviceBlock} id={'services'}>
+                <div className={styles.serviceAncore}>Services</div>
+                <div className={styles.weOffer}>we offer</div>
+                <div className={styles.offerText}>Off-the-Beaten-Track Telegram Solutions for your business. We design,build and lead unique, powerful apps to grow your business inside Telegram.</div>
+                <div className={styles.techLine}>
+                    <div className={styles.technicBlock}>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                        <div className={styles.techElement}></div>
+                    </div>
+                    <div className={styles.tmaText}>
+                        TMA<br/>
+                        AI products<br/>
+                        Mobile apps<br/>
+                        Web apps<br/>
+                        UI/UX design<br/>
+                        We utilize the <br/>
+                        top notch software.
+                    </div>
+                </div>
+                <div className={styles.tmaDescription}>
+                    TMA<br/>
+                    Grow and Expand
+                </div>
+                <div className={styles.greenClouds}>
+                    <div className={styles.greenCloud1}></div>
+                    <div className={styles.greenCloud2}></div>
+                    <div className={styles.greenCloud3}></div>
+                    <div className={styles.greenCloud4}></div>
+                </div>
+                <div className={styles.slideLine}>
+                    <div className={styles.slide}></div>
+                </div>
             </div>
         </>
     )
