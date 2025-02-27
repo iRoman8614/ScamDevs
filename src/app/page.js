@@ -9,14 +9,26 @@ export default function Home() {
                 <div className={styles.headerLightGreenBlock}>
                     <div className={styles.thinkText}>
                         <a className={styles.T}>T</a>
-                        <a>H</a>
-                        <a>I</a>
-                        <a>N</a>
-                        <a>K</a>
+                        <div className={styles.HINK}>
+                            <span className={styles.H}>H</span>
+                            <span className={styles.INK}>
+                              <a className={styles.I}>I</a>
+                              <span className={styles.NK}>
+                                <a className={styles.N}>N</a>
+                                <a className={styles.K}>K</a>
+                              </span>
+                            </span>
+                        </div>
                     </div>
+
                     <div className={styles.textBigCode}>
                         <div className={styles.textBig}>BIG</div>
-                        <div className={styles.textCode}>CODE</div>
+                        <div className={styles.textCode}>
+                            <span className={styles.C}>C</span>
+                            <span className={styles.O}>O</span>
+                            <span className={styles.D}>D</span>
+                            <span className={styles.E}>E</span>
+                        </div>
                     </div>
                     <div className={styles.textFast}>
                         <p className={styles.firstFast}>FAST</p>
