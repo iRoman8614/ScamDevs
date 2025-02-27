@@ -81,6 +81,33 @@ export default function Home() {
                     <div className={styles.slide}></div>
                 </div>
             </div>
+            <div className={styles.projectBlock} id={'projects'}>
+                <div>
+                    <div>
+                        <div>GANG WARS TMA</div>
+                        <div>
+                            We developed a Play-to-Earn game as a Telegram Mini App, where players could farm in-game coins, battle each other in PvP mode, and customize their characters. Seamlessly integrated into Telegram, it offered a smooth Web3 gaming experience.
+                            <br/><br/>
+                            Key Features:
+                            - Farming upgrade system
+                            - Leaderboards & tiered leagues
+                            - Multi-level referral system
+                            - In-game quests & missions
+                            - Clan system & tournaments
+                            - TON wallet integration
+                            <br/><br/>
+                            Development time: 8 weeks.
+                        </div>
+                        <div>
+                            WANNA BUILD YOUR OWN
+                            WEB3 GAME?! LET`S GO!
+                        </div>
+                        <div>image</div>
+                    </div>
+                    <div></div>
+                </div>
+                <div>exchange bot</div>
+            </div>
         </>
     )
 }
