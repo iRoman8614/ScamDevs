@@ -67,7 +67,7 @@
   //  transform: scaleX(1);
   //}
   75% {
-    transform: scaleX(1.05);
+    transform: scaleX(1.1);
   }
 }
 
@@ -93,12 +93,14 @@
     transform: scaleX(1);
   }
   25% {
-    transform: scaleY(0.5) scaleX(0.95);
+    transform-origin: left;
+    transform: scaleY(0.5) scaleX(0.9);
   }
   50% {
-    transform: scaleY(1);
+    transform: scaleX(1) scaleY(1);
   }
   75% {
+    transform-origin: right;
     transform: scaleX(1.2);
   }
 }
