@@ -7,17 +7,25 @@ export default function Home() {
         <>
             <div id={'header'}>
                 <div className={styles.headerLightGreenBlock}>
+                    {/*<div className={styles.thinkText}>*/}
+                    {/*    <a className={styles.T}>T</a>*/}
+                    {/*    <div className={styles.HINK}>*/}
+                    {/*        <span className={styles.H}>H</span>*/}
+                    {/*        <span className={styles.INK}>*/}
+                    {/*          <a className={styles.I}>I</a>*/}
+                    {/*          <span className={styles.NK}>*/}
+                    {/*            <a className={styles.N}>N</a>*/}
+                    {/*            <a className={styles.K}>K</a>*/}
+                    {/*          </span>*/}
+                    {/*        </span>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
+
                     <div className={styles.thinkText}>
-                        <a className={styles.T}>T</a>
+                        <span className={styles.T}>T</span>
                         <div className={styles.HINK}>
-                            <span className={styles.H}>H</span>
-                            <span className={styles.INK}>
-                              <a className={styles.I}>I</a>
-                              <span className={styles.NK}>
-                                <a className={styles.N}>N</a>
-                                <a className={styles.K}>K</a>
-                              </span>
-                            </span>
+                            <span className={styles.HIN}>HIN</span>
+                            <span className={styles.K}>K</span>
                         </div>
                     </div>
 

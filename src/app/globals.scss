@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: 'IstokWeb';
-    src: url('/fonts/IstokWeb-regular.ttf');
+    src: url('/fonts/IstokWeb-Regular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'IstokWeb';
-    src: url('/fonts/IstokWeb-bold.ttf');
-    font-weight: bold;
-    font-style: normal;
-}
+//@font-face {
+//    font-family: 'IstokWeb';
+//    src: url('/fonts/IstokWeb-bold.ttf');
+//    font-weight: bold;
+//    font-style: normal;
+//}
 
 @font-face {
     font-family: 'Rubik';
@@ -22,7 +22,7 @@
 }
 
 body {
-    font-family: 'IstokWeb', sans-serif;
+    font-family: 'IstokWeb';
     padding: 5px auto-clamp(4, 10);
     overflow-x: hidden;
 }
