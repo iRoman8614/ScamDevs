@@ -105,82 +105,6 @@
   }
 }
 
-//.HINK {
-//  display: inline-block;
-//  transform-origin: right;
-//  animation: shrinkHINK 8s infinite;
-//}
-//
-//@keyframes expandT {
-//  0% { transform: scaleX(1); }
-//  12.5% { transform: scaleX(1.2); }
-//  37.5% {transform: scaleX(0.8); }
-//  100% { transform: scaleX(1); }
-//}
-//
-//@keyframes shrinkHINK {
-//  0% { transform: scaleX(1); }
-//  12.5% { transform: scaleX(0.95); }
-//  37.5% {transform: scaleX(1.1); }
-//  100% { transform: scaleX(1); }
-//}
-//
-//.H {
-//  display: inline-block;
-//  transform-origin: left;
-//  animation: expandH 8s infinite;
-//}
-//
-//.INK {
-//  display: inline-block;
-//  transform-origin: right;
-//  animation: shrinkINK 8s infinite;
-//}
-//
-//@keyframes expandH {
-//  0% { transform: scaleX(1); }
-//  //25% { transform: scaleX(1); }
-//  37.5% { transform: scaleX(1.3); }
-//  62.5% { transform: scaleX(0.8); }
-//  100% { transform: scaleX(1); }
-//}
-//
-//@keyframes shrinkINK {
-//  0% { transform: scaleX(1); }
-//  //25% { transform: scaleX(1); }
-//  37.5% { transform: scaleX(0.9); }
-//  60% { transform: scaleX(1.1); }
-//  100% { transform: scaleX(1); }
-//}
-//
-//.N {
-//  display: inline-block;
-//  //transform-origin: left;
-//  animation: expandN 8s infinite;
-//}
-//
-//.K {
-//  display: inline-block;
-//  transform-origin: right;
-//  animation: shrinkK 8s infinite;
-//}
-//
-//@keyframes expandN {
-//  0% { transform: scaleX(1); }
-//  25% { transform: scaleX(0.9); }
-//  65% { transform: scaleX(1.1); }
-//  87.5% { transform: scaleX(0.8); }
-//  100% { transform: scaleX(1); }
-//}
-//
-//@keyframes shrinkK {
-//  0% { transform: scaleX(1); }
-//  62.5% { transform: scaleX(0.9); }
-//  87.5% { transform: scaleX(1.3); }
-//  100% { transform: scaleX(1); }
-//}
-
-
 .textBigCode {
   display: flex;
   align-items: start;
@@ -384,7 +308,8 @@
   border-radius: 18px;
   background-color: black;
   margin-top: 150px;
-  padding: 40px 80px;
+  padding: 80px;
+  margin-bottom: 150px;
 }
 
 .serviceAncore {
@@ -395,26 +320,26 @@
   padding: 25px 50px;
   width: fit-content;
   font-size: 40px;
-  margin-top: -110px;
+  margin-top: -160px;
   margin-left: 20%;
 }
 
 .weOffer {
-  color: #D9D9D9;
+  color: #FFFFFF;
   font-weight: bold;
   font-size: 98px;
   text-transform: uppercase;
   text-align: right;
-  margin: 0 20px -40px 0;
+  margin: 0 20px -45px 0;
 }
 
 .offerText {
   border-radius: 18px;
-  background-color: #D9D9D9;
+  background-color: #FFFFFF;
   font-weight: bold;
-  font-size: 60px;
-  text-align: center;
-  padding: 60px 100px;
+  font-size: 28px;
+  text-align: left;
+  padding: 30px 40px;
   margin-bottom: 100px;
 }
 
@@ -427,91 +352,212 @@
 .technicBlock {
   display: grid;
   gap: 15px;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 100px);
+  grid-template-rows: repeat(3, 100px);
   align-items: center;
 }
 
 .techElement {
   background-color: #D9D9D9;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: grayscale(0%);
+  }
 }
 
-.tmaText {
-  border-radius: 18px;
-  background-color: #D9D9D9;
-  text-align: center;
-  padding: 40px;
+.whyTitle {
+  color: #FFFFFF;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 98px;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 20px -45px 120px;
 }
 
-.tmaDescription {
-  background-color: #00FF47;
-  border-radius: 18px;
-  color: black;
-  font-size: 48px;
-  text-align: center;
-  margin: 0 30px;
-  padding: 60px;
-}
-
-.greenClouds {
+.whyGroup {
   position: relative;
-  height: 200px;
-  margin-top: -5px;
 }
 
-.greenCloud1 {
-  background-color: #00FF47;
+
+.whyText {
+  position: relative;
   border-radius: 18px;
-  width: 400px;
-  height: 30px;
-  position: absolute;
-  top: 0;
-  left: 15%;
+  background-color: #FFFFFF;
+  font-weight: bold;
+  font-size: 28px;
+  text-align: left;
+  padding: 30px 40px;
+  margin-bottom: 100px;
+  z-index: 2;
+  width: 80%;
+  margin: auto;
+
+  p {
+    font-weight: normal;
+    padding: 0;
+    margin: 0 0 0 10px;
+  }
 }
 
-.greenCloud2 {
-  background-color: #00FF47;
+.whyTextBoldLine {
+  font-family: 'IstokWebBold';
+  margin: 0 0 0 0 !important;
+}
+
+.greenWhyBG {
+  background: #00FF47;
   border-radius: 18px;
-  width: 500px;
-  height: 70px;
-  position: absolute;
-  top: 0;
-  right: 30%;
-}
-
-.greenCloud3 {
-  background-color: #00FF47;
-  border-radius: 18px;
-  width: 300px;
-  height: 120px;
-  border-top-right-radius: 0;
-  position: absolute;
-  top: 0;
-  right: 15%;
-}
-
-.greenCloud4 {
-  background-color: #00FF47;
-  border-radius: 18px;
-  width: 250px;
-  height: 25px;
-  position: absolute;
-  top: 25%;
-  right: 8%;
-}
-
-.slideLine {
-  background: #D9D9D9;
-  width: auto;
-  padding: 20px 40px;
-}
-
-.slide {
+  height: 350px;
   width: 100%;
-  height: 20px;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 0;
+}
+
+.whiteCloud1 {
+  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  width: 300px;
+  height: 60px;
+  background: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  margin: 0 145px 0 auto;
+}
+
+.whiteCloud2 {
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  width: 300px;
+  height: 60px;
+  background: #FFFFFF;
+  position: relative;
+  z-index: 2;
+  margin: -15px 45px -15px auto;
+}
+
+.whyGreenCloud1 {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
+  background: #00FF47;
+  margin: 0 0 -100px auto;
+}
+.whyGreenCloud2 {
+  position: absolute;
+  bottom: -6%;
+  right: 8%;
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
+  background: #00FF47;
+  margin: 0 0 -100px auto;
+}
+
+.whyPointsList {
+  margin-top: 40px;
+  margin-left: 120px;
+}
+
+
+.projectBlock {
+  border-radius: 18px;
+  background-color: black;
+  margin-top: 150px;
+  padding: 80px 60px;
+  margin-bottom: 150px;
+  color: #FFFFFF;
+}
+
+.projectAncore {
+  color: #D9D9D9;
+  background-color: black;
+  border-radius: 20px;
+  text-transform: uppercase;
+  padding: 25px 50px;
+  width: fit-content;
+  font-size: 40px;
+  margin-top: -160px;
+  margin-left: 45%;
+}
+
+.projectTitle {
+  font-family: 'IstokWebBold';
+  font-size: 50px;
+}
+
+.projectDescriptionBlock {
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  gap: 100px;
+}
+
+.projectDescription {
+  align-self: center;
+  padding: 40px;
+
+  a {
+    font-family: 'IstokWebBold';
+  }
+}
+
+.projectImage {
+  align-self: center;
+  justify-self: end;
+}
+
+.projectCloud {
+  position: relative;
+  font-family: 'Rubik';
+  font-weight: bold;
+  color: black;
+  padding: 15px;
   background-color: #00FF47;
+  border-radius: 18px;
+  width: fit-content;
+  z-index: 4;
+  margin: -100px 0 50px 25%;
+}
+
+.projectCloudText {
+  position: relative;
+  z-index: 4;
+}
+
+.projectCloud1 {
+  background-color: #00FF47;
+  border-radius: 18px;
+  height: 30px;
+  width: 70px;
+  position: absolute;
+  top: -15px;
+  right: 40px;
+  z-index: 1;
+}
+
+.projectCloud2 {
+  background-color: #00FF47;
+  border-radius: 18px;
+  height: 30px;
+  width: 70px;
+  bottom: 0;
+  left: -30px;
+  position: absolute;
+  z-index: 1;
+}
+
+.projectPointList {
+  height: fit-content;
+  margin-top: 20px;
 }

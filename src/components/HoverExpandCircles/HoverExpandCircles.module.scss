@@ -1,0 +1,27 @@
+.container {
+  background: black;
+  color: white;
+  width: fit-content;
+}
+
+.item {
+  display: flex;
+  align-items: start;
+  cursor: pointer;
+  margin-bottom: 10px;
+  justify-self: end;
+}
+
+.circle {
+  background: white;
+  border-radius: 15px;
+  margin-left: 10px;
+  transition: width 0.3s ease;
+}
+
+.text {
+  max-width: 350px;
+  margin-right: 10px;
+  font-size: 28px;
+  text-align: right;
+}

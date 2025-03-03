@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: 120px 250px;
+  align-items: center;
+  cursor: pointer;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+.circle {
+  justify-self: end;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 15px;
+  transition: width 0.3s ease;
+  margin-right: 10px;
+}
+
+.text {
+  font-family: 'IstokWebBold';
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
