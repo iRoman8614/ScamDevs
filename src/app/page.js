@@ -1,8 +1,12 @@
+"use client"
 import styles from './page.module.scss'
 import Image from "next/image";
+import Lottie from 'react-lottie';
 import HoverExpandCircles from "@/components/HoverExpandCircles/HoverExpandCircles";
 import ExpandingCircle from "@/components/ExpandingCircle/ExpandingCircle";
 import MirrorExpandingCircle from "@/components/ExpandingCircle/MirrorExpandingCircle";
+import animationData from '../../public/anim36.json';
+import {useEffect, useState} from "react";
 
 const Plain = '/tgPlain.svg'
 const phones = '/phones.png'
@@ -28,6 +32,37 @@ const spine = '/spine.svg'
 const sql = '/sql.svg'
 
 export default function Home() {
+
+    //конфиг анимации
+    const [dimensions, setDimensions] = useState({
+        width: '100vw',
+        height: 'auto' // Мы начинаем с авто, чтобы поддержать соотношение сторон
+    })
+    useEffect(() => {
+        const handleResize = () => {
+            // Установка ширины и автоматической высоты при изменении размера окна
+            setDimensions({
+                width: '100vw',
+                height: 'auto'
+            });
+        };
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', handleResize);
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
+        }
+    }, []);
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice' // Это ключ к избежанию искажений
+        }
+    };
+    // конец конфига анимации
+
     return(
         <>
             <div id={'header'}>
@@ -62,6 +97,24 @@ export default function Home() {
                     <div className={styles.pinkPixel5}></div>
                 </div>
             </div>
+
+            <div id={'header'}>
+                <div className={styles.headerLightGreenBlock}>
+                    <Lottie options={defaultOptions}
+                            height={dimensions.height}
+                            width={dimensions.width}
+                    />
+                </div>
+                <div className={styles.headerGreenBlock}>
+                    <Image className={styles.tgPlane} src={Plain} alt={'tg'} width={300} height={300} />
+                    <div className={styles.pinkPixel1}></div>
+                    <div className={styles.pinkPixel2}></div>
+                    <div className={styles.pinkPixel3}></div>
+                    <div className={styles.pinkPixel4}></div>
+                    <div className={styles.pinkPixel5}></div>
+                </div>
+            </div>
+
             <div className={styles.serviceBlock} id={'services'}>
                 <div className={styles.serviceAncore}>Services</div>
                 <div className={styles.weOffer}>we offer</div>
