@@ -1,13 +1,15 @@
 "use client"
+import dynamic from 'next/dynamic';
 import styles from './page.module.scss'
 import Image from "next/image";
-import Lottie from 'react-lottie';
 import HoverExpandCircles from "@/components/HoverExpandCircles/HoverExpandCircles";
 import ExpandingCircle from "@/components/ExpandingCircle/ExpandingCircle";
 import MirrorExpandingCircle from "@/components/ExpandingCircle/MirrorExpandingCircle";
 import animationData from '../../public/animText.json';
 import {useState} from "react";
-import Tilt from 'react-parallax-tilt';
+
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
+const Tilt = dynamic(() => import('react-parallax-tilt'), { ssr: false });
 
 const Plain = '/tgPlain.svg'
 const phones = '/phones.png'
