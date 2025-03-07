@@ -5,8 +5,9 @@ import Lottie from 'react-lottie';
 import HoverExpandCircles from "@/components/HoverExpandCircles/HoverExpandCircles";
 import ExpandingCircle from "@/components/ExpandingCircle/ExpandingCircle";
 import MirrorExpandingCircle from "@/components/ExpandingCircle/MirrorExpandingCircle";
-import animationData from '../../public/anim36.json';
-import {useEffect, useState} from "react";
+import animationData from '../../public/animText.json';
+import {useState} from "react";
+import Tilt from 'react-parallax-tilt';
 
 const Plain = '/tgPlain.svg'
 const phones = '/phones.png'
@@ -30,80 +31,71 @@ const procreate = '/procreate.svg'
 const redux = '/redux.svg'
 const spine = '/spine.svg'
 const sql = '/sql.svg'
+const gwImage = '/phoneImage.png'
 
 export default function Home() {
 
     //конфиг анимации
     const [dimensions, setDimensions] = useState({
         width: '100vw',
-        height: 'auto' // Мы начинаем с авто, чтобы поддержать соотношение сторон
+        height: 'auto'
     })
-    useEffect(() => {
-        const handleResize = () => {
-            // Установка ширины и автоматической высоты при изменении размера окна
-            setDimensions({
-                width: '100vw',
-                height: 'auto'
-            });
-        };
-        if (typeof window !== 'undefined') {
-            window.addEventListener('resize', handleResize);
-            return () => {
-                window.removeEventListener('resize', handleResize);
-            };
-        }
-    }, []);
     const defaultOptions = {
         loop: true,
         autoplay: true,
         animationData: animationData,
         rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice' // Это ключ к избежанию искажений
+            preserveAspectRatio: 'xMidYMid slice'
         }
     };
     // конец конфига анимации
 
     return(
         <>
+            {/*<div id={'header'}>*/}
+            {/*    <div className={styles.headerLightGreenBlock}>*/}
+            {/*        <div className={styles.thinkText}>*/}
+            {/*            <span className={styles.T}>T</span>*/}
+            {/*            <div className={styles.HINK}>*/}
+            {/*                <span className={styles.HIN}>HIN</span>*/}
+            {/*                <span className={styles.K}>K</span>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*        <div className={styles.textBigCode}>*/}
+            {/*            <div className={styles.textBig}>BIG</div>*/}
+            {/*            <div className={styles.textCode}>*/}
+            {/*                <span className={styles.C}>C</span>*/}
+            {/*                <span className={styles.O}>O</span>*/}
+            {/*                <span className={styles.D}>D</span>*/}
+            {/*                <span className={styles.E}>E</span>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*        <div className={styles.textFast}>*/}
+            {/*            <p className={styles.firstFast}>FAST</p>*/}
+            {/*            <p className={styles.secondFast}>FAST</p>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*    <div className={styles.headerGreenBlock}>*/}
+            {/*        <Image className={styles.tgPlane} src={Plain} alt={'tg'} width={300} height={300} />*/}
+            {/*        <div className={styles.pinkPixel1}></div>*/}
+            {/*        <div className={styles.pinkPixel2}></div>*/}
+            {/*        <div className={styles.pinkPixel3}></div>*/}
+            {/*        <div className={styles.pinkPixel4}></div>*/}
+            {/*        <div className={styles.pinkPixel5}></div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div id={'header'}>
                 <div className={styles.headerLightGreenBlock}>
-                    <div className={styles.thinkText}>
-                        <span className={styles.T}>T</span>
-                        <div className={styles.HINK}>
-                            <span className={styles.HIN}>HIN</span>
-                            <span className={styles.K}>K</span>
-                        </div>
-                    </div>
-                    <div className={styles.textBigCode}>
-                        <div className={styles.textBig}>BIG</div>
-                        <div className={styles.textCode}>
-                            <span className={styles.C}>C</span>
-                            <span className={styles.O}>O</span>
-                            <span className={styles.D}>D</span>
-                            <span className={styles.E}>E</span>
-                        </div>
-                    </div>
+                    <Lottie
+                        className={styles.lottie}
+                        options={defaultOptions}
+                        height={dimensions.height}
+                        width={dimensions.width}
+                    />
                     <div className={styles.textFast}>
                         <p className={styles.firstFast}>FAST</p>
                         <p className={styles.secondFast}>FAST</p>
                     </div>
-                </div>
-                <div className={styles.headerGreenBlock}>
-                    <Image className={styles.tgPlane} src={Plain} alt={'tg'} width={300} height={300} />
-                    <div className={styles.pinkPixel1}></div>
-                    <div className={styles.pinkPixel2}></div>
-                    <div className={styles.pinkPixel3}></div>
-                    <div className={styles.pinkPixel4}></div>
-                    <div className={styles.pinkPixel5}></div>
-                </div>
-            </div>
-
-            <div id={'header'}>
-                <div className={styles.headerLightGreenBlock}>
-                    <Lottie options={defaultOptions}
-                            height={dimensions.height}
-                            width={dimensions.width}
-                    />
                 </div>
                 <div className={styles.headerGreenBlock}>
                     <Image className={styles.tgPlane} src={Plain} alt={'tg'} width={300} height={300} />
@@ -224,7 +216,9 @@ export default function Home() {
                             <br/><br/>
                             <a>Development time:</a> 8 weeks.
                         </div>
-                        <Image className={styles.projectImage} src={phones} alt={''} width={450} height={450} />
+                        <Tilt className={styles.tilt}>
+                            <Image className={styles.projectImage} src={gwImage} alt={''} width={450} height={450} />
+                        </Tilt>
                     </div>
                     <div className={styles.projectCloud}>
                         <div className={styles.projectCloudText}>WANNA BUILD YOUR OWN<br/>WEB3 GAME?! LET`S GO!</div>
@@ -246,7 +240,9 @@ export default function Home() {
                                 <MirrorExpandingCircle text={'Simple and intuitive user interface'} />
                             </div>
                         </div>
-                        <Image className={styles.projectImage} src={nda} alt={''} width={450} height={450} />
+                        <Tilt className={styles.tilt}>
+                            <Image className={styles.projectImage} src={nda} alt={''} width={450} height={450} />
+                        </Tilt>
                     </div>
                 </div>
             </div>

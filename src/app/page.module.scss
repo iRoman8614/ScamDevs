@@ -184,7 +184,7 @@
   font-size: auto-clamp(0, 350);
   line-height: auto-clamp(0, 250);
   padding: 0;
-  margin: -3% 0 50px 40%;
+  margin: -10% 0 50px 40%;
   z-index: 4;
   p {
     position: absolute;
@@ -499,22 +499,37 @@
 
 .projectDescriptionBlock {
   display: grid;
-  grid-template-columns: repeat(2, 40%);
-  gap: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
 }
 
 .projectDescription {
+  font-size: 28px;
   align-self: center;
-  padding: 40px;
+  padding-left: 40px;
 
   a {
     font-family: 'IstokWebBold';
   }
 }
 
+.tilt {
+  align-self: start;
+  justify-self: center;
+  width: fit-content;
+  height: fit-content;
+  scale: 1.5;
+  align-items: center;
+  justify-items: center;
+  margin-left: 50px;
+}
+
 .projectImage {
+  width: fit-content;
+  height: fit-content;
   align-self: center;
   justify-self: end;
+  padding: 15px;
 }
 
 .projectCloud {
