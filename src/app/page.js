@@ -7,6 +7,7 @@ import ExpandingCircle from "@/components/ExpandingCircle/ExpandingCircle";
 import MirrorExpandingCircle from "@/components/ExpandingCircle/MirrorExpandingCircle";
 import animationData from '../../public/animText.json';
 import {useState} from "react";
+import FoilCard from "@/components/holo-foil/FoilCard";
 
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 const Tilt = dynamic(() => import('react-parallax-tilt'), { ssr: false });
@@ -88,16 +89,15 @@ export default function Home() {
             {/*</div>*/}
             <div id={'header'}>
                 <div className={styles.headerLightGreenBlock}>
-                    <Lottie
-                        className={styles.lottie}
-                        options={defaultOptions}
-                        height={dimensions.height}
-                        width={dimensions.width}
-                    />
-                    <div className={styles.textFast}>
-                        <p className={styles.firstFast}>FAST</p>
-                        <p className={styles.secondFast}>FAST</p>
-                    </div>
+                        <Lottie
+                            options={defaultOptions}
+                            height={dimensions.height}
+                            width={dimensions.width}
+                        />
+                        <div className={styles.textFast}>
+                            <p className={styles.firstFast}>FAST</p>
+                            <p className={styles.secondFast}>FAST</p>
+                        </div>
                 </div>
                 <div className={styles.headerGreenBlock}>
                     <Image className={styles.tgPlane} src={Plain} alt={'tg'} width={300} height={300} />
@@ -221,6 +221,14 @@ export default function Home() {
                         <Tilt className={styles.tilt}>
                             <Image className={styles.projectImage} src={gwImage} alt={''} width={450} height={450} />
                         </Tilt>
+                        <FoilCard
+                            frontImage={gwImage}
+                            backImage="https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg"
+                            color1="#ec9bb6"
+                            color2="#ccac6f"
+                            width="fit-content"
+                            height="auto"
+                        />
                     </div>
                     <div className={styles.projectCloud}>
                         <div className={styles.projectCloudText}>WANNA BUILD YOUR OWN<br/>WEB3 GAME?! LET`S GO!</div>
