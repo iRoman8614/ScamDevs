@@ -60,16 +60,18 @@ export default function Home() {
             <Navbar />
             <div id={'header'}>
                 <div className={styles.headerLightGreenBlock}>
+                    <div className={styles.lottie}>
                         <Lottie
                             options={defaultOptions}
                             height={dimensions.height}
                             width={dimensions.width}
                             isClickToPauseDisabled={true}
                         />
-                        <div className={styles.textFast}>
-                            <p className={styles.firstFast}>FAST</p>
-                            <p className={styles.secondFast}>FAST</p>
-                        </div>
+                    </div>
+                    <div className={styles.textFast}>
+                        <p className={styles.firstFast}>FAST</p>
+                        <p className={styles.secondFast}>FAST</p>
+                    </div>
                 </div>
                 <div className={styles.headerGreenBlock}>
                     <Image className={styles.tgPlane} src={Plain} alt={'tg'} width={300} height={300} />
@@ -80,9 +82,10 @@ export default function Home() {
                     <div className={styles.pinkPixel5}></div>
                 </div>
             </div>
-
             <div className={styles.serviceBlock}>
-                <div className={styles.serviceAncore} id={'services'}>Services</div>
+                <div className={styles.serviceAncore} id={'services'}>
+                    <div className={styles.serviceAncoreText}>Services</div>
+                </div>
                 <div className={styles.weOffer}>we offer</div>
                 <div className={styles.offerText}>Off-the-Beaten-Track Telegram Solutions for your business. We design,build and lead unique, powerful apps to grow your business inside Telegram.</div>
                 <div className={styles.techLine}>
@@ -173,7 +176,8 @@ export default function Home() {
                 </div>
             </div>
             <div className={styles.projectBlock}>
-                <div className={styles.projectAncore} id={'projects'}>Projects</div>
+                <div className={styles.projectAncore} id={'projects'}>Projects
+                    <div className={styles.projectAncoreText}>Projects</div></div>
                 <div>
                     <div className={styles.projectTitle}>GANG WARS TMA</div>
                     <div className={styles.projectDescriptionBlock}>

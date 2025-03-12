@@ -6,7 +6,11 @@
 .headerLightGreenBlock {
   width: auto;
   background: #84FF00;
-  padding-bottom: auto-clamp(0, 250);;
+  padding-bottom: auto-clamp(0, 250);
+}
+
+.lottie {
+  scale: 0.95;
 }
 
 .thinkText {
@@ -147,12 +151,18 @@
 .serviceBlock {
   border-radius: 18px;
   background-color: black;
-  margin-top: 150px;
+  margin-top: 180px;
   padding: 80px;
   margin-bottom: 150px;
 }
 
 .serviceAncore {
+  margin-top: -183px;
+  padding-top: 23px;
+}
+
+.serviceAncoreText {
+  font-family: 'IstokWeb';
   color: #D9D9D9;
   background-color: black;
   border-radius: 20px;
@@ -160,8 +170,8 @@
   padding: 25px 50px;
   width: fit-content;
   font-size: 40px;
-  margin-top: -160px;
-  margin-left: 20%;
+  //margin-top: -160px;
+  margin-left: 29.15%;
 }
 
 .weOffer {
@@ -321,6 +331,12 @@
 }
 
 .projectAncore {
+  margin-top: -183px;
+  padding-top: -1px;
+}
+
+.projectAncoreText {
+  font-family: 'IstokWeb';
   color: #D9D9D9;
   background-color: black;
   border-radius: 20px;
@@ -328,8 +344,8 @@
   padding: 25px 50px;
   width: fit-content;
   font-size: 40px;
-  margin-top: -160px;
-  margin-left: 43%;
+  //margin-top: -160px;
+  margin-left: 49.17%;
 }
 
 .projectTitle {
