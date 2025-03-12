@@ -8,6 +8,8 @@ import MirrorExpandingCircle from "@/components/ExpandingCircle/MirrorExpandingC
 import animationData from '../../public/animText.json';
 import {useState} from "react";
 import FoilCard from "@/components/holo-foil/FoilCard";
+import Navbar from "@/components/navbar/Navbar";
+import ContactForm from "@/components/form/ContactForm";
 
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 const Tilt = dynamic(() => import('react-parallax-tilt'), { ssr: false });
@@ -54,45 +56,15 @@ export default function Home() {
     // конец конфига анимации
 
     return(
-        <>
-            {/*<div id={'header'}>*/}
-            {/*    <div className={styles.headerLightGreenBlock}>*/}
-            {/*        <div className={styles.thinkText}>*/}
-            {/*            <span className={styles.T}>T</span>*/}
-            {/*            <div className={styles.HINK}>*/}
-            {/*                <span className={styles.HIN}>HIN</span>*/}
-            {/*                <span className={styles.K}>K</span>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*        <div className={styles.textBigCode}>*/}
-            {/*            <div className={styles.textBig}>BIG</div>*/}
-            {/*            <div className={styles.textCode}>*/}
-            {/*                <span className={styles.C}>C</span>*/}
-            {/*                <span className={styles.O}>O</span>*/}
-            {/*                <span className={styles.D}>D</span>*/}
-            {/*                <span className={styles.E}>E</span>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*        <div className={styles.textFast}>*/}
-            {/*            <p className={styles.firstFast}>FAST</p>*/}
-            {/*            <p className={styles.secondFast}>FAST</p>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className={styles.headerGreenBlock}>*/}
-            {/*        <Image className={styles.tgPlane} src={Plain} alt={'tg'} width={300} height={300} />*/}
-            {/*        <div className={styles.pinkPixel1}></div>*/}
-            {/*        <div className={styles.pinkPixel2}></div>*/}
-            {/*        <div className={styles.pinkPixel3}></div>*/}
-            {/*        <div className={styles.pinkPixel4}></div>*/}
-            {/*        <div className={styles.pinkPixel5}></div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+        <main className={styles.main}>
+            <Navbar />
             <div id={'header'}>
                 <div className={styles.headerLightGreenBlock}>
                         <Lottie
                             options={defaultOptions}
                             height={dimensions.height}
                             width={dimensions.width}
+                            isClickToPauseDisabled={true}
                         />
                         <div className={styles.textFast}>
                             <p className={styles.firstFast}>FAST</p>
@@ -109,8 +81,8 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className={styles.serviceBlock} id={'services'}>
-                <div className={styles.serviceAncore}>Services</div>
+            <div className={styles.serviceBlock}>
+                <div className={styles.serviceAncore} id={'services'}>Services</div>
                 <div className={styles.weOffer}>we offer</div>
                 <div className={styles.offerText}>Off-the-Beaten-Track Telegram Solutions for your business. We design,build and lead unique, powerful apps to grow your business inside Telegram.</div>
                 <div className={styles.techLine}>
@@ -200,8 +172,8 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className={styles.projectBlock} id={'projects'}>
-                <div className={styles.projectAncore}>Projects</div>
+            <div className={styles.projectBlock}>
+                <div className={styles.projectAncore} id={'projects'}>Projects</div>
                 <div>
                     <div className={styles.projectTitle}>GANG WARS TMA</div>
                     <div className={styles.projectDescriptionBlock}>
@@ -256,6 +228,10 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </>
+            <div className={styles.contactBlock}>
+                <div className={styles.contactAncore} id={'contact'}>Contact</div>
+                <ContactForm />
+            </div>
+        </main>
     )
 }

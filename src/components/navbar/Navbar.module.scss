@@ -1,0 +1,32 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: fit-content;
+  background: transparent;
+  color: white;
+  mix-blend-mode: exclusion;
+  z-index: 100;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.navbar a {
+  font-family: 'IstokWeb';
+  text-transform: uppercase;
+  mix-blend-mode: exclusion;
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.logo {
+  background: black;
+  border-radius: 18px;
+  padding: 0 10px;
+}
