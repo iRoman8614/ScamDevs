@@ -1,3 +1,5 @@
+@import '../../../app/_utils';
+
 .container {
   background: black;
   color: white;
@@ -5,7 +7,8 @@
 }
 
 .item {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto-clamp(120, 300));
   align-items: start;
   cursor: pointer;
   margin-bottom: 10px;
@@ -22,6 +25,11 @@
 .text {
   max-width: 350px;
   margin-right: 10px;
-  font-size: 28px;
+  font-size: auto-clamp(16, 28);
   text-align: right;
+}
+
+.space {
+  width: 120px;
+  align-items: end;
 }

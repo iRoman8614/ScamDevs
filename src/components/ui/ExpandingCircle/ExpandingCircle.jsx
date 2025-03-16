@@ -11,7 +11,7 @@ export default function ExpandingCircle({ text }) {
              onMouseLeave={() => setIsHovered(false)}
         >
             <div className={styles.circle} style={{
-                width: isHovered ? '120px' : '30px'
+                width: isHovered ? '80px' : '30px'
             }}/>
             <span className={styles.text}>{text}</span>
         </div>

@@ -21,6 +21,10 @@
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'IstokWeb';
     padding: 5px auto-clamp(4, 10);

@@ -1,11 +1,14 @@
+@import '../../../app/_utils';
+
 .container {
   display: grid;
-  grid-template-columns: 400px 120px;
+  grid-template-columns: auto 80px;
+  height: auto;
   justify-content: space-between;
-  align-items: center;
-  background: black;
+  align-items: start;
   color: white;
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .circle {
@@ -20,5 +23,5 @@
 .text {
   font-family: 'IstokWebBold';
   text-align: left;
-  width: max-content;
+  font-size: auto-clamp(16, 24);
 }

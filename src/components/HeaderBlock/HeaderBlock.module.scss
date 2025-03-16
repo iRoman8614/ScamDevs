@@ -1,0 +1,146 @@
+@import '../../app/_utils';
+
+.headerLightGreenBlock {
+  width: auto;
+  background: #84FF00;
+  padding-bottom: auto-clamp(0, 250);
+}
+
+.lottie {
+  padding: 10px;
+}
+
+.thinkText {
+  font-size: auto-clamp(0, 600);
+  line-height: auto-clamp(0, 470);
+  padding-top: auto-clamp(20, 50);
+  display: inline-block;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.textFast {
+  position: relative;
+  font-size: auto-clamp(0, 350);
+  line-height: auto-clamp(0, 250);
+  padding: 0;
+  margin: -10% 0 50px 40%;
+  z-index: 4;
+  p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    color: black;
+    opacity: 0.5;
+  }
+
+  .firstFast {
+    transition: opacity 0.3s ease;
+    animation: moveLeft 0.1s infinite linear
+  }
+
+  .secondFast {
+    color: black;
+    left: auto-clamp(0, 10);
+    opacity: 0.5;
+    animation: moveRight 0.1s infinite linear
+  }
+}
+
+@keyframes moveRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(1px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-1px);
+  }
+}
+
+@keyframes moveLeft {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-1px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+}
+
+.headerGreenBlock {
+  background: #00FF47;
+  margin-left: 6%;
+  margin-top: -6%;
+  height: auto-clamp(0, 550);
+  position: relative;
+}
+
+.tgPlane {
+  width: 35%;
+  height: auto;
+  margin-top: -3%;
+  margin-left: -4%;
+}
+
+.pinkPixel1 {
+  z-index: 3;
+  background: #FF67C2;
+  width: 2.3%;
+  padding-bottom: 2.3%;
+  position: absolute;
+  top: -7%;
+  //right: 13.2%;
+  right: 23.2%;
+}
+
+.pinkPixel2 {
+  background: #FF67C2;
+  width: 2%;
+  padding-bottom: 2%;
+  position: absolute;
+  //top: 23%;
+  //right: 11.1%;
+  top: 16%;
+  right: 21.1%;
+}
+
+.pinkPixel3 {
+  background: #FF67C2;
+  width: 1.3%;
+  padding-bottom: 1.3%;
+  position: absolute;
+  //top: 13%;
+  //right: 9.5%;
+  top: 10%;
+  right: 19.5%;
+}
+
+.pinkPixel4 {
+  background: #FF67C2;
+  width: 1.3%;
+  padding-bottom: 1.3%;
+  position: absolute;
+  bottom: 33%;
+  right: 12%;
+}
+
+.pinkPixel5 {
+  background: #FF67C2;
+  width: 4.2%;
+  padding-bottom: 4.1%;
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+}

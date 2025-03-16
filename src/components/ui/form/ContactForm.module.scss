@@ -1,0 +1,94 @@
+@import '../../../app/_utils';
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  background: black;
+}
+
+.title {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: auto-clamp(30, 98);
+  line-height: auto-clamp(30, 98);
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0 80px auto-clamp(-8, -45) auto;
+}
+
+.input, .inputName, .inputEmail,
+.textarea {
+  display: block;
+  width: 95%;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  color: black;
+  background: white;
+  outline: none;
+  margin-top: -10px;
+}
+
+.inputName, .textarea {
+  margin-right: auto;
+
+  &:hover {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.inputEmail {
+  margin-left: auto;
+
+  &:hover {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+.textarea {
+  height: 150px;
+  resize: none;
+}
+
+.button {
+  background: #00ff66;
+  color: #FF67C2;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: -50px;
+  margin-right: 25%;
+  align-self: flex-end;
+}
+
+.button:hover {
+  background: #00cc55;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin: -30px 0 10px 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .title {
+    margin-right: auto;
+  }
+
+  .input, .inputName, .inputEmail,
+  .textarea {
+    margin-top: 0;
+  }
+}

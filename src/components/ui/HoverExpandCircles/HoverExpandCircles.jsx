@@ -8,7 +8,7 @@ export default function HoverExpandCircles() {
     const [widths, setWidths] = useState(Array(items.length).fill(45));
 
     const handleMouseEnter = (index) => {
-        const newWidths = items.map(() => 30 + Math.random() * 30);
+        const newWidths = items.map(() => 30 + Math.random() * 50);
         newWidths[index] = 120;
         setWidths(newWidths);
     };
@@ -27,13 +27,15 @@ export default function HoverExpandCircles() {
                     onMouseLeave={handleMouseLeave}
                 >
                     <span className={styles.text}>{item}</span>
-                    <div
-                        className={styles.circle}
-                        style={{
-                            width: `${widths[index]}px`,
-                            height: '30px',
-                        }}
-                    />
+                    <div className={styles.space}>
+                        <div
+                            className={styles.circle}
+                            style={{
+                                width: `${widths[index]}px`,
+                                height: '30px',
+                            }}
+                        />
+                    </div>
                 </div>
             ))}
         </div>

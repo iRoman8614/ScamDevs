@@ -12,7 +12,7 @@ export default function MirrorExpandingCircle({ text }) {
             <span className={styles.text}>{text}</span>
             <div
                 className={styles.circle}
-                style={{ width: isHovered ? '120px' : '20px' }}
+                style={{ width: isHovered ? '80px' : '20px' }}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             />

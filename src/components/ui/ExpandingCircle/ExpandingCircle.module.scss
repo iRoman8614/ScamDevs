@@ -1,9 +1,10 @@
+@import '../../../app/_utils';
+
 .container {
   display: grid;
-  grid-template-columns: 120px 250px;
+  grid-template-columns: 80px auto;
   align-items: center;
   cursor: pointer;
-  background: black;
   color: white;
   padding: 10px;
 }
@@ -20,6 +21,6 @@
 
 .text {
   font-family: 'IstokWebBold';
-  font-size: 24px;
+  font-size: auto-clamp(16, 24);
   transition: color 0.3s ease;
 }

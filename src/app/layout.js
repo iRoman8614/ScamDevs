@@ -1,5 +1,4 @@
 import "./globals.scss";
-import {Header} from "@/components/header";
 
 export const metadata = {
   title: "Scam Devs",
@@ -10,7 +9,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        {/*<Header />*/}
         {children}
       </body>
     </html>
