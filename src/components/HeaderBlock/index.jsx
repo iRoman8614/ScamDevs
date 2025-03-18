@@ -2,8 +2,9 @@ import styles from './HeaderBlock.module.scss'
 import {useState} from "react";
 import animationData from "../../../public/animText.json";
 import Image from "next/image";
-import Lottie from 'react-lottie'
+import dynamic from "next/dynamic";
 const Plain = '/tgPlain.svg'
+const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
 export const Header = () => {
     //конфиг анимации

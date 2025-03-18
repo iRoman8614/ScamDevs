@@ -5,6 +5,7 @@ import {Header} from "@/components/HeaderBlock";
 import {Services} from "@/components/Services";
 import {Projects} from "@/components/Projects";
 import {Contacts} from "@/components/Contacts";
+import {About} from "@/components/About";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
             <Services />
             <Projects />
             <Contacts />
+            <About />
         </main>
     )
 }

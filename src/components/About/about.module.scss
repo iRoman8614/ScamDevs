@@ -1,0 +1,88 @@
+@import '../../app/_utils';
+
+.root {
+  background: black;
+  border-radius: 18px;
+  padding: 80px 60px 20px 60px;
+}
+
+.textCloud {
+  background: #00FF47;
+  width: 160px;
+  height: 80px;
+  border-radius: 10px;
+  margin: 0 -20px -20px auto;
+}
+
+.aboutText {
+  mix-blend-mode: difference;
+  background: white;
+  color: black;
+  padding: 40px 80px;
+  border-radius: 12px;
+  font-size: auto-clamp(16, 28);
+}
+
+.swiperBlock {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  margin: 40px 0;
+}
+
+.swiperCloud {
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  width: 20vw;
+  text-align: center;
+  font-family: "IstokWebBold";
+  margin: -40px auto 0 -60px;
+}
+
+.swiperCloudGreen {
+  background: #00FF47;
+  width: 160px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 100px auto -20px 100px;
+}
+
+.swiper {
+  width: 100%;
+  padding: 20px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 33% 66%;
+  margin: auto 0 0 0;
+  align-items: center;
+}
+
+.footerText {
+  justify-self: right;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 720px) {
+  .root {
+    padding: 30px 20px;
+  }
+  .textCloud {
+    margin: 0 -10px -20px auto;
+  }
+  .aboutText {
+    padding: 20px;
+  }
+  .swiperCloudGreen {
+    margin: 50px 0 -20px auto;
+  }
+  .swiperBlock {
+    display: flex;
+    flex-direction: column;
+  }
+  .swiperCloud {
+    width: 60vw;
+    margin: -40px auto 0 -20px;
+  }
+}

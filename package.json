@@ -16,6 +16,9 @@
     "react-hook-form": "^7.54.2",
     "react-lottie": "^1.2.10",
     "react-parallax-tilt": "^1.7.285",
-    "sass": "^1.85.0"
+    "react-slick": "^0.30.3",
+    "sass": "^1.85.0",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.5"
   }
 }
