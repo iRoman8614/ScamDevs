@@ -134,6 +134,7 @@
 .whiteCloud1 {
   border-bottom-right-radius: 18px;
   border-bottom-left-radius: 18px;
+  border-top-right-radius: 18px;
   width: 300px;
   height: 60px;
   background: #FFFFFF;
@@ -190,7 +191,7 @@
   }
 
   .serviceBlock {
-    margin-top: 50px;
+    //margin-top: 50px;
     padding: 30px 20px;
     margin-bottom: 50px;
   }

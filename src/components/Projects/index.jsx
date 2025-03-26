@@ -53,14 +53,15 @@ export const Projects = () => {
                     <div className={styles.projectDescriptionBlock}>
                         <div className={styles.projectDescription}>
                             We developed a Telegram bot that allows users to perform exchange operations between various crypto assets directly within the app. Integrated into Telegram’s ecosystem, it offers a user-friendly interface for quick and secure transactions.
-                            <br/><br/><br/>
-                            <a>Development time:</a> 4 weeks.
+                            <br/><br/>
                             <div className={styles.projectPointList}>
                                 <MirrorExpandingCircle text={'Support for multiple crypto assets'} />
                                 <MirrorExpandingCircle text={'Real-time exchange rates'} />
                                 <MirrorExpandingCircle text={'Instant and secure transactions'} />
                                 <MirrorExpandingCircle text={'Simple and intuitive user interface'} />
                             </div>
+                            <br/>
+                            <a>Development time:</a> 4 weeks.
                         </div>
                         <Tilt className={styles.tilt}>
                             <Image className={styles.projectImage} src={nda} alt={''} width={250} height={250} />

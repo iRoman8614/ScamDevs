@@ -23,10 +23,13 @@
 }
 
 .text {
+  font-family: "IstokWebBold";
+  line-height: 45px;
   max-width: 350px;
   margin-right: 10px;
   font-size: auto-clamp(16, 28);
   text-align: right;
+  align-self: center;
 }
 
 .space {

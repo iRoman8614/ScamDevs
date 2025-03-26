@@ -72,8 +72,22 @@
   visibility: visible !important;
 }
 
+.navBarStaticMobile {
+  display: none;
+}
+
 @media screen and (max-width: 760px) {
-  .navbar, .navbarStatic {
-    display: none;
+  .navbar, .navbarStatic, .showen {
+    visibility: hidden !important;
+  }
+
+  .navBarStaticMobile {
+    display: block;
+    font-family: 'IstokWebBold';
+    font-size: 40px;
+    line-height: 40px;
+    text-align: right;
+    margin: 0 20px -10px 0;
+    padding: 0;
   }
 }

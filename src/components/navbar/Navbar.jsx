@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styles from './Navbar.module.scss';
 import Image from "next/image";
 
-const Navbar = ({type}) => {
+const Navbar = () => {
     const navbarRef = useRef(null);
 
     useEffect(() => {
