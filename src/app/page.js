@@ -6,12 +6,13 @@ import {Services} from "@/components/Services";
 import {Projects} from "@/components/Projects";
 import {Contacts} from "@/components/Contacts";
 import {About} from "@/components/About";
+import NavbarStatic from "@/components/navbar/NavbarStatic";
 
 
 export default function Home() {
     return(
         <main className={styles.main}>
-            {/*<Navbar />*/}
+            <Navbar/>
             <Header />
             <Services />
             <Projects />

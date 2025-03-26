@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styles from './Navbar.module.scss';
 import Image from "next/image";
 
-const Navbar = () => {
+const Navbar = ({type}) => {
     const navbarRef = useRef(null);
 
     useEffect(() => {
@@ -49,7 +49,7 @@ const Navbar = () => {
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <a href="#contact">About</a>
+            <a href="#about">About</a>
         </div>
     );
 };

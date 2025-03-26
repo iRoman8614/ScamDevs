@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "html2canvas": "^1.4.1",
     "next": "15.1.7",
     "react": "^18.2.0",
