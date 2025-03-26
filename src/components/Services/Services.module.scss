@@ -4,7 +4,7 @@
   border-radius: 18px;
   background-color: black;
   //margin-top: 180px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   padding: 100px 80px;
 }
 
@@ -112,6 +112,7 @@
     font-weight: normal;
     padding: 0;
     margin: 0 0 0 10px;
+    text-align: justify;
   }
 }
 
@@ -183,6 +184,99 @@
   margin-top: 40px;
   margin-left: 120px;
   z-index: 100;
+}
+
+.slidingBlock {
+  position: relative;
+  z-index: 10;
+  background: #00FF47;
+  border-radius: 18px;
+  width: 90%;
+  margin: -350px auto 0 auto;
+  padding: auto-clamp(30, 100) auto-clamp(20, 80);
+}
+
+.slidingText {
+  padding: auto-clamp(20, 80) auto-clamp(20, 80) 10px auto-clamp(20, 80);
+  border-radius: 11px;
+  background: #FFFFFF;
+}
+
+
+.lightGreenCloud {
+  background: #84FF00;
+  width: 100%;
+  height: 250px;
+  border-radius: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.slidingGreenCloud1, .slidingGreenCloud2, .slidingGreenCloud3, .slidingGreenCloud4, .slidingGreenCloud5, .slidingGreenCloud6 {
+  background: #00FF47;
+  border-radius: 11px;
+}
+
+.slidingGreenCloud1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin: 10px;
+}
+
+.slidingGreenCloud2 {
+  width: auto-clamp(140, 300);
+  height: 15px;
+  margin: -20px 25% 0 auto;
+}
+
+.slidingGreenCloud3 {
+  width: auto-clamp(180, 350);
+  height: 35px;
+  margin: -15px 10% 0 auto;
+}
+
+.slidingGreenCloud4 {
+  width: auto-clamp(160, 360);
+  height: 112px;
+  margin: -35px 2% 0 auto;
+}
+
+.slidingGreenCloud5 {
+  width: auto-clamp(150, 400);
+  height: 9px;
+  margin: -65px -20px 40px auto;
+}
+
+.slidingGreenCloud6 {
+  width: auto-clamp(150, 400);
+  height: 9px;
+  margin: -15px -30px 10px auto;
+}
+
+.slidingWhiteCloud1, .slidingWhiteCloud2, .slidingWhiteCloud3 {
+  position: relative;
+  z-index: 3;
+  background: #FFFFFF;
+  border-radius: 11px;
+}
+
+.slidingWhiteCloud1 {
+  width: auto-clamp(60, 130);
+  height: 50px;
+  margin:  0 -20px -20px auto;
+}
+
+.slidingWhiteCloud2 {
+  width: auto-clamp(150, 300);
+  height: 50px;
+  margin:  0 -100px -15px auto;
+}
+
+.slidingWhiteCloud3 {
+  width: auto-clamp(200, 480);
+  height: 50px;
+  margin:  0 -60px -10px auto;
 }
 
 @media screen and (max-width: 720px) {

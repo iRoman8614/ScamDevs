@@ -117,6 +117,34 @@ export const Services = () => {
                     </div>
                 </div>
             </div>
+            <div className={styles.lightGreenCloud} />
+            <div className={styles.slidingBlock}>
+                <div>
+                    <div className={styles.slidingWhiteCloud1} />
+                    <div className={styles.slidingWhiteCloud2} />
+                    <div className={styles.slidingWhiteCloud3} />
+                </div>
+                <div className={styles.slidingText}>
+                    <div>
+                        <div className={styles.whyText}>
+                            <p className={styles.whyTextBoldLine}>Why Telegram Mini Apps?</p>
+                            <p>Telegram Mini Apps provide an app-free experience inside one of the world's fastest-growing ecosystems. With over 900M+ active users, Telegram allows businesses to reach massive audiences without forcing users to download additional apps. Mini Apps offer easy onboarding, native payments, and deep engagement, making them a powerful tool for gaming, e-commerce, fintech, and community-driven platforms.</p>
+                        </div>
+                        <div className={styles.whyText}>
+                            <p className={styles.whyTextBoldLine}>Our Expertise & Value</p>
+                            <p>With hands-on experience in Telegram Mini App development, we understand the platform’s capabilities and best practices. We have a proven track record in building user-centric applications that focus on retention and engagement, ensuring that users keep coming back. Our team also excels in optimized performance, secure integrations, and scalable architecture, helping businesses leverage Telegram’s full potential for growth.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className={styles.slidingGreenCloud1} />
+                        <div className={styles.slidingGreenCloud2} />
+                        <div className={styles.slidingGreenCloud3} />
+                        <div className={styles.slidingGreenCloud4} />
+                        <div className={styles.slidingGreenCloud5} />
+                        <div className={styles.slidingGreenCloud6} />
+                    </div>
+                </div>
+            </div>
         </section>
     )
 }
