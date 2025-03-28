@@ -1,17 +1,17 @@
 @import '../../app/_utils.scss';
 
 .navbar {
+  box-sizing: border-box !important;
   position: fixed;
   top: -1px;
   left: 0;
-  width: 100vw;
+  width: 100vw !important;
   height: fit-content;
   background: transparent;
   color: white;
   mix-blend-mode: exclusion;
   z-index: 100;
-  padding: 30px 20px 0 20px;
-  box-sizing: border-box;
+  padding: 30px auto-clamp(4, 10) 0 auto-clamp(4, 10);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,11 +55,12 @@
 
 .navbarStatic a, .showen {
   visibility: hidden;
-  color: #FFFFFF;
+  color: #00FF00;
   background: #040712;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding: 12px;
+  margin-top: 9px;
   font-size: auto-clamp(20, 55);
   font-weight: bold;
   font-family: 'IstokWeb';
@@ -67,8 +68,8 @@
 }
 
 .showen {
-  position: relative;
-  z-index: 111;
+  //position: relative;
+  //z-index: 111;
   visibility: visible !important;
 }
 

@@ -20,13 +20,21 @@ export const Projects = () => {
                         <div className={styles.projectDescription}>
                             We developed a Play-to-Earn game as a Telegram Mini App, where players could farm in-game coins, battle each other in PvP mode, and customize their characters. Seamlessly integrated into Telegram, it offered a smooth Web3 gaming experience.
                             <br/><br/>
-                            <a>Key Features:</a><br/>
-                            - Farming upgrade system<br/>
-                            - Leaderboards & tiered leagues<br/>
-                            - Multi-level referral system<br/>
-                            - In-game quests & missions<br/>
-                            - Clan system & tournaments<br/>
-                            - TON wallet integration<br/>
+                            {/*<a>Key Features:</a><br/>*/}
+                            <div className={styles.projectPointList}>
+                                <MirrorExpandingCircle text={'Farming upgrade system'} />
+                                <MirrorExpandingCircle text={'Leaderboards & tiered leagues'} />
+                                <MirrorExpandingCircle text={'Multi-level referral system'} />
+                                <MirrorExpandingCircle text={'In-game quests & missions'} />
+                                <MirrorExpandingCircle text={'Clan system & tournaments'} />
+                                <MirrorExpandingCircle text={'TON wallet integration'} />
+                            </div>
+                            {/*- Farming upgrade system<br/>*/}
+                            {/*- Leaderboards & tiered leagues<br/>*/}
+                            {/*- Multi-level referral system<br/>*/}
+                            {/*- In-game quests & missions<br/>*/}
+                            {/*- Clan system & tournaments<br/>*/}
+                            {/*- TON wallet integration<br/>*/}
                             <br/><br/>
                             <a>Development time:</a> 8 weeks.
                         </div>

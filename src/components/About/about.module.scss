@@ -5,6 +5,7 @@
   border-radius: 18px;
   border-top-right-radius: 0;
   padding: 80px 60px 20px 60px;
+  margin-bottom: -110px;
 }
 
 .textCloud {
@@ -21,7 +22,7 @@
   color: black;
   padding: 40px 80px;
   border-radius: 12px;
-  font-size: auto-clamp(16, 32);
+  font-size: auto-clamp(20, 40);
 }
 
 .swiperBlock {
@@ -61,6 +62,7 @@
 }
 
 .footerText {
+  font-size: auto-clamp(16, 36);
   justify-self: right;
   color: #FFFFFF;
 }

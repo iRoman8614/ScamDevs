@@ -100,7 +100,7 @@
   border-radius: 18px;
   background-color: #FFFFFF;
   font-weight: bold;
-  font-size: auto-clamp(16, 28);
+  font-size: auto-clamp(20, 40);
   text-align: left;
   padding: 30px 40px;
   z-index: 2;
@@ -117,6 +117,7 @@
 }
 
 .whyTextBoldLine {
+  font-size: auto-clamp(22, 44);
   font-family: 'IstokWebBold';
   margin: 0 0 0 0 !important;
 }

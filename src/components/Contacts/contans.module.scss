@@ -30,7 +30,7 @@
   color: #FFFFFF;
   font-weight: bold;
   font-size: auto-clamp(30, 98);
-  line-height: auto-clamp(30, 98);
+  line-height: auto-clamp(26, 90);
   text-transform: uppercase;
   text-align: right;
   margin: 0 80px auto-clamp(-10, -50) auto;
@@ -41,13 +41,13 @@
   height: 300px;
   background: #FFFFFF;
   border-radius: 18px;
-  margin-top: -15px;
+  margin-top: -17px;
 }
 
 .contactsPointList {
-  width: 30%;
+  width: 50%;
   height: fit-content;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 @media screen and (max-width: 720px) {

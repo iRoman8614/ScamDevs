@@ -32,6 +32,7 @@
   background: white;
   outline: none;
   margin-top: -10px;
+  transition: margin-right 0.3s ease, margin-left 0.3s ease;
 }
 
 .inputName, .textarea {
