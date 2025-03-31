@@ -1,5 +1,5 @@
 import styles from './HeaderBlock.module.scss'
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import animationData from "../../../public/animText.json";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -7,6 +7,26 @@ const Plain = '/tgPlain.svg'
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 
 export const Header = () => {
+    const [planeStyle, setPlaneStyle] = useState({ transform: 'translate(0, 0)' });
+    useEffect(() => {
+        const handleScroll = () => {
+            const newPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const target = windowHeight * 0.4; // 40% от верха экрана
+            if (newPosition > target) {
+                const offset = Math.min((newPosition - target) / 2, 300);
+                const scale = Math.max(1 - (newPosition - target) / 800, 0.9);
+                setPlaneStyle({ transform: `translate(${offset}px, -${offset}px) scale(${scale})` });
+            } else {
+                setPlaneStyle({ transform: 'translate(0, 0) scale(1)' });
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     //конфиг анимации
     const [dimensions, setDimensions] = useState({
         width: 'auto',
@@ -39,7 +59,9 @@ export const Header = () => {
                 </div>
             </div>
             <div className={styles.headerGreenBlock}>
-                <Image className={styles.tgPlane} src={Plain} alt={'tg'} width={300} height={300} />
+                <div style={planeStyle} className={styles.tgPlaneAnim}>
+                    <Image className={styles.tgPlane} src={Plain} alt={'tg'} width={300} height={300} />
+                </div>
                 <div className={styles.pinkPixel1}></div>
                 <div className={styles.pinkPixel2}></div>
                 <div className={styles.pinkPixel3}></div>

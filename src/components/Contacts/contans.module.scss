@@ -50,6 +50,13 @@
   margin-top: 80px;
 }
 
+.line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 @media screen and (max-width: 720px) {
   .contactBlock {
     padding: 30px 20px;

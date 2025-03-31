@@ -19,37 +19,32 @@
   margin: 0 80px auto-clamp(-8, -45) auto;
 }
 
-.input, .inputName, .inputEmail,
-.textarea {
+.input, .inputName, .inputEmail, .textarea {
   display: block;
   width: 95%;
   padding: 15px;
   margin-bottom: 30px;
   border-radius: 10px;
   border: none;
-  font-size: 18px;
+  font-size: auto-clamp(20, 32);
   color: black;
   background: white;
   outline: none;
   margin-top: -10px;
-  transition: margin-right 0.3s ease, margin-left 0.3s ease;
+  transition: transform 1s ease;
 }
 
 .inputName, .textarea {
-  margin-right: auto;
-
+  transform: translateX(0%);
   &:hover {
-    margin-right: 0;
-    margin-left: auto;
+    transform: translateX(5%);
   }
 }
 
 .inputEmail {
-  margin-left: auto;
-
+  transform: translateX(5%);
   &:hover {
-    margin-left: 0;
-    margin-right: auto;
+    transform: translateX(0%);
   }
 }
 
@@ -75,6 +70,8 @@
   margin-top: -50px;
   margin-right: 12%;
   align-self: flex-end;
+  position: relative;
+  z-index: 2;
 }
 
 .button:hover {

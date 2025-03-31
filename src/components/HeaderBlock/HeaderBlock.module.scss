@@ -87,6 +87,10 @@
   position: relative;
 }
 
+.tgPlaneAnim {
+  transition: transform 0.5s ease;
+}
+
 .tgPlane {
   width: 35%;
   height: auto;

@@ -79,7 +79,8 @@
 
 @media screen and (max-width: 760px) {
   .navbar, .navbarStatic, .showen {
-    visibility: hidden !important;
+    display: none;
+    //visibility: hidden !important;
   }
 
   .navBarStaticMobile {
@@ -88,7 +89,7 @@
     font-size: 40px;
     line-height: 40px;
     text-align: right;
-    margin: 0 20px -10px 0;
+    margin: 40px 20px -10px 0;
     padding: 0;
   }
 }

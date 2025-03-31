@@ -2,6 +2,7 @@ import styles from './contans.module.scss'
 import ContactForm from "@/components/ui/form/ContactForm";
 import MirrorExpandingCircle from "@/components/ui/ExpandingCircle/MirrorExpandingCircle";
 import NavbarStatic from "@/components/navbar/NavbarStatic";
+import Image from "next/image";
 
 export const Contacts = () => {
     return(
@@ -14,9 +15,18 @@ export const Contacts = () => {
                 <div className={styles.contactsWhitePaper}></div>
             </div>
             <div className={styles.contactsPointList}>
-                <MirrorExpandingCircle text={'TG: @scam_devs'} />
-                <MirrorExpandingCircle text={'LINKD: @scam_devs'} />
-                <MirrorExpandingCircle text={'EMAIL: scamdevs@gmail.com'} />
+                <div className={styles.line}>
+                    <Image src={'/telegramLogo.webp'} alt={''} width={60} height={60} />
+                    <MirrorExpandingCircle text={'TG: @scam_devs'} />
+                </div>
+                <div className={styles.line}>
+                    <Image src={'/linkedinLogo.webp'} alt={''} width={60} height={60} />
+                    <MirrorExpandingCircle text={'LINKD: @scam_devs'} />
+                </div>
+                <div className={styles.line}>
+                    <Image src={'/sd.png'} alt={''} width={60} height={60} />
+                    <MirrorExpandingCircle text={'EMAIL: scamdevs@gmail.com'} />
+                </div>
             </div>
         </div>
         </section>
