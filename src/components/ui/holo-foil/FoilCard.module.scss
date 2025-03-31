@@ -145,3 +145,16 @@
         filter: brightness(1.2) contrast(1.25);
     }
 }
+
+.card:before {
+    background-image: linear-gradient(
+                    to bottom right,
+                    transparent 0%,
+                    var(--color1) 25%,
+                    var(--color2) 75%,
+                    transparent 100%
+    );
+    background-position: var(--mouseX) var(--mouseY);
+    background-size: 100% 100%;
+    transition: background-position 0.5s ease;
+}

@@ -20,7 +20,6 @@ export const Projects = () => {
                         <div className={styles.projectDescription}>
                             We developed a Play-to-Earn game as a Telegram Mini App, where players could farm in-game coins, battle each other in PvP mode, and customize their characters. Seamlessly integrated into Telegram, it offered a smooth Web3 gaming experience.
                             <br/><br/>
-                            {/*<a>Key Features:</a><br/>*/}
                             <div className={styles.projectPointList}>
                                 <MirrorExpandingCircle text={'Farming upgrade system'} />
                                 <MirrorExpandingCircle text={'Leaderboards & tiered leagues'} />
@@ -29,26 +28,20 @@ export const Projects = () => {
                                 <MirrorExpandingCircle text={'Clan system & tournaments'} />
                                 <MirrorExpandingCircle text={'TON wallet integration'} />
                             </div>
-                            {/*- Farming upgrade system<br/>*/}
-                            {/*- Leaderboards & tiered leagues<br/>*/}
-                            {/*- Multi-level referral system<br/>*/}
-                            {/*- In-game quests & missions<br/>*/}
-                            {/*- Clan system & tournaments<br/>*/}
-                            {/*- TON wallet integration<br/>*/}
                             <br/><br/>
                             <a>Development time:</a> 8 weeks.
                         </div>
-                        <Tilt className={styles.tilt}>
-                            <Image className={styles.projectImage} src={gwImage} alt={''} width={450} height={450} />
-                        </Tilt>
-                        {/*<FoilCard*/}
-                        {/*    frontImage={gwImage}*/}
-                        {/*    backImage="https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg"*/}
-                        {/*    color1="#ec9bb6"*/}
-                        {/*    color2="#ccac6f"*/}
-                        {/*    width="fit-content"*/}
-                        {/*    height="auto"*/}
-                        {/*/>*/}
+                        {/*<Tilt className={styles.tilt}>*/}
+                        {/*    <Image className={styles.projectImage} src={gwImage} alt={''} width={450} height={450} />*/}
+                        {/*</Tilt>*/}
+                        <FoilCard
+                            frontImage={gwImage}
+                            backImage="https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg"
+                            color1="#ec9bb6"
+                            color2="#ccac6f"
+                            width="fit-content"
+                            height="auto"
+                        />
                     </div>
                     <div className={styles.projectCloud}>
                         <div className={styles.projectCloudText}>WANNA BUILD YOUR OWN<br/>WEB3 GAME?! LET`S GO!</div>

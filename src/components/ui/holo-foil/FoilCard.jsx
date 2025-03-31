@@ -21,9 +21,19 @@ const FoilCard = ({ frontImage, backImage, color1, color2 }) => {
         };
     }, [frontImage]);
 
+const handleMouseMove = (event) => {
+    const { left, top, width, height } = cardRef.current.getBoundingClientRect();
+    const x = ((event.clientX - left) / width) * 100;
+    const y = ((event.clientY - top) / height) * 100;
+
+    cardRef.current.style.setProperty('--mouseX', `${x}%`);
+    cardRef.current.style.setProperty('--mouseY', `${y}%`);
+};
+
     return (
         <Tilt
             ref={cardRef}
+onMouseMove={handleMouseMove}
             className={styles.card}
             style={{
                 '--front': `url(${frontImage})`,
