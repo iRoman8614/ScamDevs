@@ -38,10 +38,19 @@
 
 .contactsWhitePaper {
   width: 100%;
-  height: 300px;
+  height: auto;
   background: #FFFFFF;
   border-radius: 18px;
   margin-top: -17px;
+  color: black;
+  padding: auto-clamp(15, 60);
+  font-size: auto-clamp(20, 40);
+
+  p {
+    padding: 0;
+    margin: 0;
+    font-family: IstokWebBold;
+  }
 }
 
 .contactsPointList {

@@ -15,7 +15,7 @@ export const About = () => {
                 <div>
                     <div className={styles.textCloud} />
                     <div className={styles.aboutText}>
-                        We’re a team of tech junkies who live for turning wild ideas into real, working products. Whether it’s Web3, fintech, or entertainment, we’re all about pushing the boundaries and making things happen.
+                        We’re a team of tech geeks who live for turning wild ideas into real, working products. Whether it’s Web3, fintech, or entertainment, we’re all about pushing the boundaries and making things happen.
                         <br/><br/>
                         We don’t do things the boring way. We build fast, think outside the box, and create products that are smart, simple, and actually fun to use.
                         <br/><br/>

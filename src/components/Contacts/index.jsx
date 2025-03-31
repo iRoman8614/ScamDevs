@@ -12,7 +12,11 @@ export const Contacts = () => {
             <ContactForm />
             <div className={styles.contactsBlock}>
                 <div className={styles.contactsTitle}>contact us</div>
-                <div className={styles.contactsWhitePaper}></div>
+                <div className={styles.contactsWhitePaper}>
+                    Got an idea? Need a dev team that actually gets it? Whether it’s a new app, a custom platform, or just some solid tech advice, we’re here to help.
+                    <br/><br/>
+                    <p>Drop us a message, and let’s make things happen.</p>
+                </div>
             </div>
             <div className={styles.contactsPointList}>
                 <div className={styles.line}>
