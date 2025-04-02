@@ -8,8 +8,8 @@
 
 .item {
   display: grid;
-  grid-template-columns: repeat(2, auto-clamp(120, 300));
-  align-items: start;
+  grid-template-columns: auto-clamp(220, 400) 120px;
+  align-items: center;
   cursor: pointer;
   margin-bottom: 10px;
   justify-self: end;

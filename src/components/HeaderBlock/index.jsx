@@ -43,7 +43,7 @@ export const Header = () => {
     // конец конфига анимации
 
     return(
-        <div id={'header'}>
+        <div id={'home'}>
             <div className={styles.headerLightGreenBlock}>
                 <div className={styles.lottie}>
                     <Lottie

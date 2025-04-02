@@ -1,13 +1,10 @@
 import styles from './Project.module.scss'
-import Image from "next/image";
-import FoilCard from "@/components/ui/holo-foil/FoilCard";
 import MirrorExpandingCircle from "@/components/ui/ExpandingCircle/MirrorExpandingCircle";
-import dynamic from "next/dynamic";
 import NavbarStatic from "@/components/navbar/NavbarStatic";
-const Tilt = dynamic(() => import('react-parallax-tilt'), { ssr: false });
-
+import HoloCard from "@/components/ui/holocard/HoloCard";
 const gwImage = '/phoneImage.png'
-const phones = '/phones.png'
+const gwImage2 = '/homeImage.png'
+const gwImage3 = '/pvpimage.png'
 const nda = '/nda.png'
 export const Projects = () => {
     return(
@@ -31,17 +28,32 @@ export const Projects = () => {
                             <br/><br/>
                             <a>Development time:</a> 8 weeks.
                         </div>
-                        {/*<Tilt className={styles.tilt}>*/}
-                        {/*    <Image className={styles.projectImage} src={gwImage} alt={''} width={450} height={450} />*/}
-                        {/*</Tilt>*/}
-                        <FoilCard
-                            frontImage={gwImage}
-                            backImage="https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg"
-                            color1="#ec9bb6"
-                            color2="#ccac6f"
-                            width="fit-content"
-                            height="auto"
-                        />
+                        <div className={styles.cardSet}>
+                            <div className={styles.card1}>
+                                <HoloCard
+                                    imageUrl={gwImage}
+                                    color1="#ec9bb6"
+                                    color2="#ccac6f"
+                                    width="170px"
+                                    height="340px"/>
+                            </div>
+                            <div className={styles.card2}>
+                                <HoloCard
+                                    imageUrl={gwImage2}
+                                    color1="#ec9bb6"
+                                    color2="#ccac6f"
+                                    width="170px"
+                                    height="340px"/>
+                            </div>
+                            <div className={styles.card3}>
+                                <HoloCard
+                                    imageUrl={gwImage3}
+                                    color1="#ec9bb6"
+                                    color2="#ccac6f"
+                                    width="170px"
+                                    height="340px"/>
+                            </div>
+                        </div>
                     </div>
                     <div className={styles.projectCloud}>
                         <div className={styles.projectCloudText}>WANNA BUILD YOUR OWN<br/>WEB3 GAME?! LET`S GO!</div>
@@ -64,9 +76,14 @@ export const Projects = () => {
                             <br/>
                             <a>Development time:</a> 4 weeks.
                         </div>
-                        <Tilt className={styles.tilt}>
-                            <Image className={styles.projectImage} src={nda} alt={''} width={250} height={250} />
-                        </Tilt>
+                        <div className={styles.ndaBlock}>
+                            <HoloCard
+                                imageUrl={nda}
+                                color1="#00E5FF"
+                                color2="#F200FF"
+                                width="300px"
+                                height="300px"/>
+                        </div>
                     </div>
                 </div>
             </div>

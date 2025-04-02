@@ -15,7 +15,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
 }
 
 .navbar a {
@@ -51,6 +50,7 @@
   border-radius: 18px;
   padding: 0 10px;
   visibility: hidden;
+  height: 30px;
 }
 
 .navbarStatic a, .showen {

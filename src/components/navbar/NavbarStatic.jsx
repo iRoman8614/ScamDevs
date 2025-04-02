@@ -8,7 +8,9 @@ const NavbarStatic = ({type}) => {
                 type === 'services' &&
                 <>
                     <div className={styles.navbarStatic}>
-                        <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
+                        <a>
+                            <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
+                        </a>
                         <a className={styles.showen}>Services</a>
                         <a>Projects</a>
                         <a>Contact</a>
@@ -23,7 +25,9 @@ const NavbarStatic = ({type}) => {
                 type === 'projects' &&
                 <>
                     <div className={styles.navbarStatic}>
-                        <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
+                        <a>
+                            <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
+                        </a>
                         <a>Services</a>
                         <a className={styles.showen}>Projects</a>
                         <a>Contact</a>
@@ -38,7 +42,9 @@ const NavbarStatic = ({type}) => {
                 type === 'contact' &&
                 <>
                     <div className={styles.navbarStatic}>
-                        <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
+                        <a>
+                            <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
+                        </a>
                         <a>Services</a>
                         <a>Projects</a>
                         <a className={styles.showen}>Contact</a>
@@ -53,7 +59,9 @@ const NavbarStatic = ({type}) => {
                 type === 'about' &&
                 <>
                     <div className={styles.navbarStatic}>
-                        <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
+                        <a>
+                            <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
+                        </a>
                         <a>Services</a>
                         <a>Projects</a>
                         <a>Contact</a>

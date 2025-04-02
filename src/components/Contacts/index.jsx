@@ -3,6 +3,7 @@ import ContactForm from "@/components/ui/form/ContactForm";
 import MirrorExpandingCircle from "@/components/ui/ExpandingCircle/MirrorExpandingCircle";
 import NavbarStatic from "@/components/navbar/NavbarStatic";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Contacts = () => {
     return(
@@ -19,16 +20,16 @@ export const Contacts = () => {
                 </div>
             </div>
             <div className={styles.contactsPointList}>
-                <div className={styles.line}>
-                    <Image src={'/telegramLogo.webp'} alt={''} width={60} height={60} />
+                <Link href={'https://t.me/scam_devs'} className={styles.line}>
+                    <Image src={'/telegramLogo.webp'} alt={''} width={50} height={50} />
                     <MirrorExpandingCircle text={'TG: @scam_devs'} />
-                </div>
-                <div className={styles.line}>
-                    <Image src={'/linkedinLogo.webp'} alt={''} width={60} height={60} />
+                </Link>
+                <Link href={'https://www.linkedin.com/groups/10066625/'} className={styles.line}>
+                    <Image src={'/linkedinLogo.webp'} alt={''} width={50} height={50} />
                     <MirrorExpandingCircle text={'LINKD: @scam_devs'} />
-                </div>
+                </Link>
                 <div className={styles.line}>
-                    <Image src={'/sd.png'} alt={''} width={60} height={60} />
+                    <Image src={'/sd.png'} alt={''} width={50} height={50} />
                     <MirrorExpandingCircle text={'EMAIL: scamdevs@gmail.com'} />
                 </div>
             </div>

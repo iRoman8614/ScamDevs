@@ -61,6 +61,10 @@
   grid-template-columns: repeat(6, 100px);
   grid-template-rows: repeat(3, 100px);
   align-items: center;
+
+  @media screen and (max-width: 1115px) {
+    grid-template-columns: repeat(4, 100px);
+  }
 }
 
 .techElement {
@@ -324,7 +328,7 @@
 
   .serviceBlock {
     //margin-top: 50px;
-    padding: 30px 20px;
+    padding: 30px 20px 120px 30px;
     margin-bottom: 50px;
   }
 

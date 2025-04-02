@@ -1,5 +1,6 @@
 import styles from "./ContactForm.module.scss";
 import { useForm } from "react-hook-form";
+import axios from 'axios';
 
 const ContactForm = () => {
     const {
@@ -8,9 +9,19 @@ const ContactForm = () => {
         formState: { errors },
     } = useForm();
 
-    const onSubmit = (data) => {
-        console.log("Form Data:", data);
-        alert("Message Sent!");
+    const onSubmit = async (data) => {
+        try {
+            const response = await axios.post('/api/telegram/', data);
+            console.log(response.data);
+            if (response.data.success) {
+                alert('Message Sent!');
+            } else {
+                alert('Failed to send message.');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            alert('Error sending message.');
+        }
     };
 
     return (
