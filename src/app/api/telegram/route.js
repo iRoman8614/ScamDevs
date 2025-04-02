@@ -1,36 +1,39 @@
-export default async function handler(req, res) {
-    if (req.method === 'POST') {
-        const { name, email, message } = req.body;
+// app/api/telegram/route.js
+import { NextResponse } from 'next/server';
 
-        const botToken = '7744594697:AAHw3oSORx-BXn-ATVusYI0lFb2TGAEhIPk';
-        const chatId = "-4522962405";
-
-        const text = `Новое сообщение:\n\nИмя: ${name}\n\nEmail: ${email}\n\nСообщение: ${message}`;
-
-        try {
-            const response = await fetch(
-                `https://api.telegram.org/bot${botToken}/sendMessage`,
-                {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        chat_id: chatId,
-                        text,
-                        parse_mode: 'HTML'
-                    }),
-                }
-            );
-
-            if (response.ok) {
-                res.status(200).json({ success: true, message: 'Сообщение отправлено!' });
-            } else {
-                res.status(500).json({ success: false, message: 'Ошибка при отправке сообщения.' });
-            }
-        } catch (error) {
-            res.status(500).json({ success: false, message: 'Ошибка сети при отправке сообщения.' });
+export async function POST(request) {
+    try {
+        const { name, email, message } = await request.json();
+        if (!name || !email || !message) {
+            return NextResponse.json({ success: false, message: 'Missing required fields' }, { status: 400 });
         }
-    } else {
-        res.setHeader('Allow', ['POST']);
-        res.status(405).end(`Method ${req.method} Not Allowed`);
+        const botToken = '7744594697:AAHw3oSORx-BXn-ATVusYI0lFb2TGAEhIPk';
+        const chatId = '-1002623200452';
+        const text = `<b>Новое сообщение:</b>\n\n<b>Имя:</b> ${name}\n<b>Email:</b> ${email}\n\n<b>Сообщение:</b>\n${message}`;
+        const response = await fetch(
+            `https://api.telegram.org/bot${botToken}/sendMessage`,
+            {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text,
+                    parse_mode: 'HTML'
+                }),
+            }
+        );
+        const telegramResponse = await response.json();
+        if (response.ok && telegramResponse.ok) {
+            return NextResponse.json({ success: true, message: 'Сообщение отправлено!' });
+        } else {
+            console.error('Telegram API Error:', telegramResponse);
+            return NextResponse.json({ success: false, message: `Ошибка при отправке сообщения: ${telegramResponse.description || 'Unknown error'}` }, { status: response.status });
+        }
+    } catch (error) {
+        console.error('API Route Error:', error);
+        if (error instanceof SyntaxError) {
+            return NextResponse.json({ success: false, message: 'Invalid JSON body' }, { status: 400 });
+        }
+        return NextResponse.json({ success: false, message: 'Внутренняя ошибка сервера.' }, { status: 500 });
     }
 }
