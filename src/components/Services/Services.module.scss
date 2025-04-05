@@ -75,11 +75,27 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  cursor: pointer;
 
   filter: grayscale(100%);
   transition: filter 0.3s ease;
+  animation: grayscale-animation 10s infinite;
   &:hover {
     filter: grayscale(0%);
+  }
+
+  @keyframes grayscale-animation {
+    0%, 100% {
+      filter: grayscale(100%);
+    }
+    50% {
+      filter: grayscale(0%);
+    }
+  }
+
+  &:hover {
+    filter: grayscale(0%);
+    animation: none;
   }
 }
 
@@ -123,7 +139,7 @@
 }
 
 .whyTextBoldLine {
-  font-size: auto-clamp(22, 44);
+  font-size: auto-clamp(20, 44);
   font-family: 'IstokWebBold';
   margin: 0 0 0 0 !important;
 }
@@ -224,7 +240,7 @@
 }
 
 .slidingText {
-  padding: auto-clamp(20, 80) auto-clamp(20, 80) 10px auto-clamp(20, 80);
+  padding: auto-clamp(20, 80) auto-clamp(0, 80) 10px auto-clamp(0, 80);
   border-radius: 11px;
   background: #FFFFFF;
 }
@@ -307,6 +323,10 @@
   width: auto-clamp(60, 130);
   height: 50px;
   margin:  0 -20px -20px auto;
+
+  @media screen and (max-width: 720px) {
+    margin-top: 20px;
+  }
 }
 
 .slidingWhiteCloud2 {
@@ -347,9 +367,10 @@
   }
 
   .technicBlock {
+    margin-top: 25px;
     grid-template-rows: repeat(6, 80px);
     grid-template-columns: repeat(3, 80px);
-    gap: 15px;
+    gap: auto-clamp(15, 150);
     margin-bottom: 50px;
   }
 
@@ -357,6 +378,8 @@
     width: 80px;
     height: 80px;
     padding: 5px;
+    filter: grayscale(0%);
+    animation: none;
   }
 
   .techImage {
@@ -374,7 +397,7 @@
 
   .whyText {
     margin-top: 0;
-    width: 90%;
+    width: 95%;
     padding: 15px;
     margin-bottom: 50px;
   }

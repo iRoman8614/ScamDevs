@@ -37,15 +37,20 @@ const DesktopLeftLoopSwiper = () => {
                 spaceBetween={20}
                 grabCursor={true}
                 loop={true}
-                slidesPerView={1.5}
-                centeredSlides={false}
+                slidesPerView={1}
+                centeredSlides={true}
                 navigation={false}
                 breakpoints={{
+                    720: {
+                        slidesPerView: 'auto',
+                        centeredSlides: false,
+                        spaceBetween: 0,
+                    },
                     1024: {
                         slidesPerView: 'auto',
                         centeredSlides: false,
                         spaceBetween: 25,
-                    },
+                    }
                 }}
                 className={styles.mySwiper}
             >

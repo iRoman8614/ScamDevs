@@ -26,8 +26,14 @@
 }
 
 body {
+    width: 100vw;
     margin: 0;
     font-family: 'IstokWeb';
     padding: 5px auto-clamp(4, 10);
+    overflow-x: hidden;
+}
+
+html {
+    width: 100vw;
     overflow-x: hidden;
 }

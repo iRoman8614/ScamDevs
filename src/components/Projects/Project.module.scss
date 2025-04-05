@@ -4,7 +4,7 @@
   border-radius: 18px;
   background-color: black;
   padding: 80px auto-clamp(10, 80);
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   color: #FFFFFF;
 }
 
@@ -34,9 +34,12 @@
 
 .projectDescriptionBlock {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 4fr 3fr;
   gap: auto-clamp(5, 50);
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1440px) {
+    grid-template-columns: 4fr 4fr;
+  }
+  @media screen and (max-width: 1170px) {
     grid-template-columns: 3fr 4fr;
   }
   @media screen and (max-width: 820px) {
@@ -91,6 +94,7 @@
 .projectCloudText {
   position: relative;
   z-index: 4;
+  font-size: auto-clamp(14, 24);
 }
 
 .projectCloud1 {
@@ -120,53 +124,28 @@
   margin-top: 20px;
 }
 
-//.cardSet {
-//  display: flex;
-//  margin-left: auto-clamp(10, 80);
-//  margin-top: auto-clamp(20, 100);
-//  width: fit-content;
-//}
-//
-//.card1 {
-//  position: relative;
-//  z-index: 2;
-//  height: fit-content;
-//  margin-top: 40px;
-//  &:hover {
-//    z-index: 5;
-//  }
-//}
-//
-//.card2 {
-//  position: relative;
-//  z-index: 3;
-//  height: fit-content;
-//  transform-origin: left bottom;
-//  transform: rotate(20deg);
-//  margin-left: -150px;
-//  &:hover {
-//    z-index: 5;
-//  }
-//}
-//
-//.card3 {
-//  position: relative;
-//  z-index: 4;
-//  height: fit-content;
-//  transform-origin: left bottom;
-//  transform: rotate(40deg);
-//  margin-left: -150px;
-//}
 
 .cardSet {
+  margin-left: 40px;
   display: flex;
   width: fit-content;
   position: relative;
   padding-bottom: 100px;
   cursor: pointer;
   padding-top: 40px;
-
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: 1440px) {
+    margin-left: 70px;
+  }
+  @media screen and (max-width: 1350px) {
+    margin-left: 40px;
+  }
+  @media screen and (max-width: 1280px) {
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 1235px) {
+    margin-left: 0;
+  }
+  @media screen and (max-width: 720px) {
     align-self: center;
   }
 }
@@ -188,64 +167,78 @@
 .card1 {
   z-index: 2;
   margin-top: 40px;
+
+  @media screen and (max-width: 720px) {
+    margin-top: 30px;
+    transform: rotate(-5deg);
+  }
 }
 
 .card2 {
   z-index: 3;
   transform-origin: left bottom;
-  transform: rotate(20deg);
+  transform: rotate(10deg);
   margin-left: -120px;
   
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: 720px) {
     transform: rotate(0deg);
   }
 }
 
 .card2:hover {
   z-index: 5;
-  transform: rotate(20deg) translateY(-10px);
+  transform: rotate(10deg) translateY(-10px);
 }
 
 .card3 {
   z-index: 4;
   transform-origin: left bottom;
-  transform: rotate(40deg);
+  transform: rotate(20deg);
   margin-left: -120px;
 
-  @media screen and (max-width: 630px) {
-    transform: rotate(0deg);
-    margin-top: -40px;
+  @media screen and (max-width: 720px) {
+    transform: rotate(5deg);
+    margin-top: -30px;
   }
 }
 
 .card3:hover {
   z-index: 5;
-  transform: rotate(40deg) translateY(-10px);
+  transform: rotate(20deg) translateY(-10px);
 }
 
 .cardSet:hover .card1 {
   margin-top: 0;
   z-index: 2;
+
+  @media screen and (max-width: 720px) {
+    transform: rotate(-5deg);
+    margin-top: 0px;
+  }
 }
 
 .cardSet:hover .card2 {
   margin-left: -80px;
-  transform: rotate(20deg) translateY(-20px);
-  @media screen and (max-width: 630px) {
+  transform: rotate(10deg) translateY(-20px);
+  @media screen and (max-width: 720px) {
     transform: rotate(0deg);
-    margin-left: -40px;
-    margin-top: -20px;
+    //margin-left: -40px;
+    //margin-top: -20px;
+    margin-left: -100px;
+    margin-top: 0px;
   }
 }
 
 .cardSet:hover .card3 {
   margin-left: -80px;
-  transform: rotate(40deg) translateY(-30px);
+  transform: rotate(20deg) translateY(-30px);
 
-  @media screen and (max-width: 630px) {
-    transform: rotate(0deg);
-    margin-left: -40px;
-    margin-top: -40px;
+  @media screen and (max-width: 720px) {
+    transform: rotate(5deg);
+    //margin-left: -40px;
+    //margin-top: -40px;
+    margin-left: -100px;
+    margin-top: 0px;
   }
 }
 
@@ -257,8 +250,8 @@
 
 .cardSet:hover .card2:hover {
   z-index: 5;
-  transform: rotate(20deg) translateY(-60px);
-  @media screen and (max-width: 630px) {
+  transform: rotate(10deg) translateY(-60px);
+  @media screen and (max-width: 720px) {
     transform: rotate(0deg);
     margin-top: -20px;
   }
@@ -266,9 +259,9 @@
 
 .cardSet:hover .card3:hover {
   z-index: 5;
-  transform: rotate(40deg) translateY(-90px);
+  transform: rotate(20deg) translateY(-90px);
 
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: 720px) {
     transform: rotate(0deg);
     margin-top: -40px;
   }

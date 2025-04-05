@@ -1,5 +1,10 @@
 @import '../../app/_utils';
 
+.root {
+  height: fit-content;
+  overflow: hidden;
+}
+
 .headerLightGreenBlock {
   width: auto;
   background: #84FF00;

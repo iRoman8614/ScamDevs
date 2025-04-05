@@ -2,9 +2,9 @@ import styles from './Project.module.scss'
 import MirrorExpandingCircle from "@/components/ui/ExpandingCircle/MirrorExpandingCircle";
 import NavbarStatic from "@/components/navbar/NavbarStatic";
 import HoloCard from "@/components/ui/holocard/HoloCard";
-const gwImage = '/phoneImage.png'
-const gwImage2 = '/homeImage.png'
-const gwImage3 = '/pvpimage.png'
+const gwImage = '/homescreen.png'
+const gwImage2 = '/lobbyscreen.png'
+const gwImage3 = '/pvpscreen.png'
 const nda = '/nda.png'
 export const Projects = () => {
     return(
@@ -49,7 +49,7 @@ export const Projects = () => {
                                 <HoloCard
                                     imageUrl={gwImage3}
                                     color1="#ec9bb6"
-                                    color2="#ccac6f"
+                                    color2="#F200FF"
                                     width="170px"
                                     height="340px"/>
                             </div>
