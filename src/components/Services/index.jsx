@@ -25,7 +25,6 @@ const spine = '/spine.svg'
 const sql = '/sql.svg'
 
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
 
 export const Services = () => {
     const { t } = useTranslation();

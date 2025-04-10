@@ -7,7 +7,6 @@ const gwImage2 = '/lobbyscreen.png'
 const gwImage3 = '/pvpscreen.png'
 const nda = '/nda.png'
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
 
 export const Projects = () => {
     const { t } = useTranslation();

@@ -40,11 +40,11 @@ const DesktopLeftLoopSwiper = () => {
                 slidesPerView={1}
                 centeredSlides={true}
                 navigation={false}
-                autoplay={{
-                    delay: 4000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                }}
+                // autoplay={{
+                //     delay: 4000,
+                //     disableOnInteraction: false,
+                //     pauseOnMouseEnter: true,
+                // }}
                 breakpoints={{
                     720: {
                         slidesPerView: 'auto',
@@ -62,7 +62,7 @@ const DesktopLeftLoopSwiper = () => {
                 {slideData.map((slide) => (
                     <SwiperSlide key={slide.id} className={styles.swiperSlide}>
                         <div className={activeIndex === slide.id ? styles.activeSlideStyle : styles.baseSlideStyle}>
-                            <Image className={styles.slideImage} src={slide.image} alt={''} width={510} height={690} />
+                            <Image className={styles.slideImage} src={slide.image} alt={''} width={170} height={230} />
                             <div className={styles.slideDesc}>
                                 {slide.name}<br/>
                                 {slide.role}

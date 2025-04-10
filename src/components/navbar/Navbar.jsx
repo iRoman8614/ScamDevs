@@ -4,10 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
 
 const Navbar = () => {
-    const { t } = useTranslation();
+    const { i18n, t } = useTranslation();
     const navbarRef = useRef(null);
 
     useEffect(() => {

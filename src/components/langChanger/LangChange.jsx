@@ -1,10 +1,9 @@
 import styles from './LangChanger.module.scss'
 import React, {useEffect, useState} from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
 
 export const LangChanger = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const [isOpen, setIsOpen] = useState(false);
     const [currentLang, setCurrentLang] = useState(i18n.language || 'en');
