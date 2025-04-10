@@ -3,18 +3,24 @@
 .navbar {
   box-sizing: border-box !important;
   position: fixed;
-  top: -1px;
+  top: 1px;
   left: 0;
   width: 100vw !important;
-  height: 150px;
+  height: 120px;
   background: transparent;
   color: white;
   mix-blend-mode: exclusion;
   z-index: 100;
-  padding: 30px auto-clamp(4, 10) 0 auto-clamp(4, 10);
+  padding: 15px auto-clamp(4, 10) 0 auto-clamp(4, 10);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
+}
+
+.link {
+  padding: 10px 0 0 0 !important;
+  margin: 0 !important;
+  align-items: end;
 }
 
 .navbar a {
@@ -29,6 +35,8 @@
 }
 
 .logo {
+  display: block;
+  align-items: center;
   width: 25vw;
   border-radius: 18px;
   padding: 0 10px;
@@ -36,13 +44,13 @@
 
 .navbarStatic {
   width: 100%;
-  height: fit-content;
-  padding: 30px 0 0 0;
+  height: 120px;
+  padding: 15px 0 0 0;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  //align-items: center;
-  margin-top: 10px;
+  align-items: end;
+  margin-top: 0;
 }
 
 .logoHiden {
@@ -50,7 +58,6 @@
   border-radius: 18px;
   padding: 0 10px;
   visibility: hidden;
-  height: 30px;
 }
 
 .navbarStatic a, .showen {
@@ -60,7 +67,7 @@
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding: 12px;
-  margin-top: 9px;
+  //margin-top: 9px;
   font-size: auto-clamp(20, 55);
   font-weight: bold;
   font-family: 'IstokWeb';

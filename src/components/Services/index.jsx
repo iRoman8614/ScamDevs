@@ -24,7 +24,11 @@ const redux = '/redux.svg'
 const spine = '/spine.svg'
 const sql = '/sql.svg'
 
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
+
 export const Services = () => {
+    const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -46,8 +50,8 @@ export const Services = () => {
         <section id='services'>
             <NavbarStatic type={'services'}/>
             <div className={styles.serviceBlock}>
-                <div className={styles.weOffer}>we offer</div>
-                <div className={styles.offerText}>Off-the-Beaten-Track Telegram Solutions for your business. We design,build and lead unique, powerful apps to grow your business inside Telegram.</div>
+                <div className={styles.weOffer}>{t('services.offer')}</div>
+                <div className={styles.offerText}>{t('services.offerText')}</div>
                 <div className={styles.techLine}>
                     <div className={styles.technicBlock}>
                         <div className={styles.techElement}>
@@ -108,30 +112,31 @@ export const Services = () => {
                     <HoverExpandCircles />
                 </div>
                 <div className={styles.whyBlock}>
-                    <div className={styles.whyTitle}>why</div>
+                    <div className={styles.whyTitle}>
+                        {t('services.why')}
+                    </div>
                     <div className={styles.whyGroup}>
                         <div className={styles.whyText}>
-                            <p className={styles.whyTextBoldLine}>Why use TMA?</p>
-                            <p>Keep users engaged inside Telegram</p>
-                            <p>Skip costly app development</p>
-                            <p>No app store restrictions</p>
-                            <p>Boost sales with a smooth experience</p>
+                            <p className={styles.whyTextBoldLine}>{t('services.WhyTMA')}</p>
+                            <p>{t('services.why1')}</p>
+                            <p>{t('services.why2')}</p>
+                            <p>{t('services.why3')}</p>
+                            <p>{t('services.why4')}</p>
                         </div>
                         <div className={styles.greenWhyBG} />
                         <div className={styles.whiteCloud1} />
                         <div className={styles.whiteCloud2} />
                         <div className={styles.whyText}>
-                            <p className={styles.whyTextBoldLine}>TMA – Grow Your Business Inside Telegram</p>
-                            <p>Turn Telegram into a sales powerhouse with custom apps—no need for expensive websites or slow mobile development. We help you convert visitors into buyers—seamlessly.
-                            </p>
+                            <p className={styles.whyTextBoldLine}>{t('services.tma')}</p>
+                            <p>{t('services.tmaText')}</p>
                         </div>
                         <div className={styles.whyGreenCloud1} />
                         <div className={styles.whyGreenCloud2} />
                     </div>
                     <div className={styles.whyPointsList}>
-                        <ExpandingCircle text={'Modern design'} />
-                        <ExpandingCircle text={'User-driven features'} />
-                        <ExpandingCircle text={'Smooth animations'} />
+                        <ExpandingCircle text={`${t('services.ModernDesign')}`}/>
+                        <ExpandingCircle text={`${t('services.UserDriven')}`} />
+                        <ExpandingCircle text={`${t('services.Smooth')}`} />
                     </div>
                 </div>
             </div>
@@ -149,12 +154,12 @@ export const Services = () => {
                     <div className={styles.slidingText}>
                         <div>
                             <div className={styles.whyText}>
-                                <p className={styles.whyTextBoldLine}>Why Telegram Mini Apps?</p>
-                                <p>Telegram Mini Apps provide an app-free experience inside one of the world's fastest-growing ecosystems. With over 900M+ active users, Telegram allows businesses to reach massive audiences without forcing users to download additional apps. Mini Apps offer easy onboarding, native payments, and deep engagement, making them a powerful tool for gaming, e-commerce, fintech, and community-driven platforms.</p>
+                                <p className={styles.whyTextBoldLine}>{t('services.WhyMiniApps')}</p>
+                                <p>{t('services.WhyMiniAppsText')}</p>
                             </div>
                             <div className={styles.whyText}>
-                                <p className={styles.whyTextBoldLine}>Our Expertise & Value</p>
-                                <p>With hands-on experience in Telegram Mini App development, we understand the platform’s capabilities and best practices. We have a proven track record in building user-centric applications that focus on retention and engagement, ensuring that users keep coming back. Our team also excels in optimized performance, secure integrations, and scalable architecture, helping businesses leverage Telegram’s full potential for growth.</p>
+                                <p className={styles.whyTextBoldLine}>{t('services.OurExpertise')}</p>
+                                <p>{t('services.OurExpertiseText')}</p>
                             </div>
                         </div>
                         <div>

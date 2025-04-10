@@ -6,6 +6,7 @@ import {Services} from "@/components/Services";
 import {Projects} from "@/components/Projects";
 import {Contacts} from "@/components/Contacts";
 import {About} from "@/components/About";
+import {LangChanger} from "@/components/langChanger/LangChange";
 
 export default function Home() {
     return(
@@ -16,6 +17,7 @@ export default function Home() {
             <Projects />
             <Contacts />
             <About />
+            <LangChanger />
         </main>
     )
 }

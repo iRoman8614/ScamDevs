@@ -6,7 +6,12 @@ const gwImage = '/homescreen.png'
 const gwImage2 = '/lobbyscreen.png'
 const gwImage3 = '/pvpscreen.png'
 const nda = '/nda.png'
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
+
 export const Projects = () => {
+    const { t } = useTranslation();
+
     return(
         <section id='projects'>
             <NavbarStatic type={'projects'}/>
@@ -15,18 +20,20 @@ export const Projects = () => {
                     <div className={styles.projectTitle}>GANG WARS TMA</div>
                     <div className={styles.projectDescriptionBlock}>
                         <div className={styles.projectDescription}>
-                            We developed a Play-to-Earn game as a Telegram Mini App, where players could farm in-game coins, battle each other in PvP mode, and customize their characters. Seamlessly integrated into Telegram, it offered a smooth Web3 gaming experience.
+                            {t('projects.GWTMA')}
                             <br/><br/>
                             <div className={styles.projectPointList}>
-                                <MirrorExpandingCircle text={'Farming upgrade system'} />
-                                <MirrorExpandingCircle text={'Leaderboards & tiered leagues'} />
-                                <MirrorExpandingCircle text={'Multi-level referral system'} />
-                                <MirrorExpandingCircle text={'In-game quests & missions'} />
-                                <MirrorExpandingCircle text={'Clan system & tournaments'} />
-                                <MirrorExpandingCircle text={'TON wallet integration'} />
+                                <MirrorExpandingCircle text={`${t('projects.GW1')}`} />
+                                <MirrorExpandingCircle text={`${t('projects.GW2')}`} />
+                                <MirrorExpandingCircle text={`${t('projects.GW3')}`} />
+                                <MirrorExpandingCircle text={`${t('projects.GW4')}`} />
+                                <MirrorExpandingCircle text={`${t('projects.GW5')}`} />
+                                <MirrorExpandingCircle text={`${t('projects.GW6')}`} />
                             </div>
                             <br/><br/>
-                            <a>Development time:</a> 8 weeks.
+                            <a>
+                                {t('projects.DevelopTime')}
+                            </a> {t('projects.8weeks')}
                         </div>
                         <div className={styles.cardSet}>
                             <div className={styles.card1}>
@@ -56,25 +63,25 @@ export const Projects = () => {
                         </div>
                     </div>
                     <div className={styles.projectCloud}>
-                        <div className={styles.projectCloudText}>WANNA BUILD YOUR OWN<br/>WEB3 GAME?! LET`S GO!</div>
+                        <div className={styles.projectCloudText}>{t('projects.WANNABUILD')}<br/> {t('projects.WEB3')}</div>
                         <div className={styles.projectCloud1} />
                         <div className={styles.projectCloud2} />
                     </div>
                 </div>
                 <div>
-                    <div className={styles.projectTitle}>CRYPTO EXCHANGE BOT</div>
+                    <div className={styles.projectTitle}>{t('projects.bot')}</div>
                     <div className={styles.projectDescriptionBlock}>
                         <div className={styles.projectDescription}>
-                            We developed a Telegram bot that allows users to perform exchange operations between various crypto assets directly within the app. Integrated into Telegram’s ecosystem, it offers a user-friendly interface for quick and secure transactions.
+                            {t('projects.botdesc')}
                             <br/><br/>
                             <div className={styles.projectPointList}>
-                                <MirrorExpandingCircle text={'Support for multiple crypto assets'} />
-                                <MirrorExpandingCircle text={'Real-time exchange rates'} />
-                                <MirrorExpandingCircle text={'Instant and secure transactions'} />
-                                <MirrorExpandingCircle text={'Simple and intuitive user interface'} />
+                                <MirrorExpandingCircle text={`${t('projects.bot1')}`} />
+                                <MirrorExpandingCircle text={`${t('projects.bot2')}`} />
+                                <MirrorExpandingCircle text={`${t('projects.bot3')}`} />
+                                <MirrorExpandingCircle text={`${t('projects.bot4')}`} />
                             </div>
                             <br/>
-                            <a>Development time:</a> 4 weeks.
+                            <a>{t('projects.DevelopTime')} </a>{t('projects.4weeks')}
                         </div>
                         <div className={styles.ndaBlock}>
                             <HoloCard

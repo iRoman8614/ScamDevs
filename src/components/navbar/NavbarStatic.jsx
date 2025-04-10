@@ -1,7 +1,12 @@
 import styles from './Navbar.module.scss';
 import Image from "next/image";
 
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
+
 const NavbarStatic = ({type}) => {
+    const { t } = useTranslation();
+
     return (
         <>
             {
@@ -11,13 +16,13 @@ const NavbarStatic = ({type}) => {
                         <a>
                             <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
                         </a>
-                        <a className={styles.showen}>Services</a>
-                        <a>Projects</a>
-                        <a>Contact</a>
-                        <a>About</a>
+                        <a className={styles.showen}>{t('navbar.services')}</a>
+                        <a>{t('navbar.projects')}</a>
+                        <a>{t('navbar.contacts')}</a>
+                        <a>{t('navbar.about')}</a>
                     </div>
                     <div className={styles.navBarStaticMobile}>
-                        Services
+                        {t('navbar.services')}
                     </div>
                 </>
             }
@@ -28,13 +33,13 @@ const NavbarStatic = ({type}) => {
                         <a>
                             <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
                         </a>
-                        <a>Services</a>
-                        <a className={styles.showen}>Projects</a>
-                        <a>Contact</a>
-                        <a>About</a>
+                        <a>{t('navbar.services')}</a>
+                        <a className={styles.showen}>{t('navbar.projects')}</a>
+                        <a>{t('navbar.contacts')}</a>
+                        <a>{t('navbar.about')}</a>
                     </div>
                     <div className={styles.navBarStaticMobile}>
-                        Projects
+                        {t('navbar.projects')}
                     </div>
                 </>
             }
@@ -45,13 +50,13 @@ const NavbarStatic = ({type}) => {
                         <a>
                             <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
                         </a>
-                        <a>Services</a>
-                        <a>Projects</a>
-                        <a className={styles.showen}>Contact</a>
-                        <a>About</a>
+                        <a>{t('navbar.services')}</a>
+                        <a>{t('navbar.projects')}</a>
+                        <a className={styles.showen}>{t('navbar.contacts')}</a>
+                        <a>{t('navbar.about')}</a>
                     </div>
                     <div className={styles.navBarStaticMobile}>
-                        Contact
+                        {t('navbar.contacts')}
                     </div>
                 </>
             }
@@ -62,13 +67,13 @@ const NavbarStatic = ({type}) => {
                         <a>
                             <Image className={styles.logoHiden} src={'/logo.svg'} alt={''} width={200} height={75} />
                         </a>
-                        <a>Services</a>
-                        <a>Projects</a>
-                        <a>Contact</a>
-                        <a className={styles.showen}>About</a>
+                        <a>{t('navbar.services')}</a>
+                        <a>{t('navbar.projects')}</a>
+                        <a>{t('navbar.contacts')}</a>
+                        <a className={styles.showen}>{t('navbar.about')}</a>
                     </div>
                     <div className={styles.navBarStaticMobile}>
-                        About
+                        {t('navbar.about')}
                     </div>
                 </>
             }

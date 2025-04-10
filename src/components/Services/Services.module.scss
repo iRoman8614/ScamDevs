@@ -79,7 +79,7 @@
 
   filter: grayscale(100%);
   transition: filter 0.3s ease;
-  animation: grayscale-animation 10s infinite;
+  animation: grayscale-animation 6s infinite;
   &:hover {
     filter: grayscale(0%);
   }
@@ -135,6 +135,13 @@
     padding: 0;
     margin: 0 0 0 10px;
     text-align: justify;
+    text-justify: inter-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
   }
 }
 
@@ -235,7 +242,7 @@
   background: #00FF47;
   border-radius: 18px;
   width: 90%;
-  margin: -300px auto 0 auto;
+  margin: -300px auto 100px auto;
   padding: auto-clamp(30, 100) auto-clamp(20, 80);
 }
 
@@ -378,8 +385,6 @@
     width: 80px;
     height: 80px;
     padding: 5px;
-    filter: grayscale(0%);
-    animation: none;
   }
 
   .techImage {
@@ -398,11 +403,15 @@
   .whyText {
     margin-top: 0;
     width: 95%;
-    padding: 15px;
+    padding: 10px;
     margin-bottom: 50px;
   }
 
   .whyPointsList {
     margin-left: 10px;
+  }
+
+  .slidingText {
+    padding: 20px 5px;
   }
 }

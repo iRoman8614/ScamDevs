@@ -2,8 +2,20 @@
 import React, { useState } from 'react';
 import styles from './HoverExpandCircles.module.scss';
 
-const items = ['TMA', 'AI products', 'Mobile apps', 'Web apps', 'UI/UX design'];
+import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+
 export default function HoverExpandCircles() {
+    const { t } = useTranslation();
+
+    const items = [
+        `${t('services.serviceList1')}`,
+        `${t('services.serviceList2')}`,
+        `${t('services.serviceList3')}`,
+        `${t('services.serviceList4')}`,
+        `${t('services.serviceList5')}`
+    ];
+
     const [widths, setWidths] = useState(Array(items.length).fill(30));
 
     const handleMouseEnter = (index) => {

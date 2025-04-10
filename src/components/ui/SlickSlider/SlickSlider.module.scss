@@ -1,4 +1,4 @@
-
+@import '../../../app/_utils.scss';
 /* 1. Контейнер для всего Swiper */
 .swiperContainer {
   width: 100%;
@@ -12,7 +12,7 @@
 }
 
 .swiperSlide {
-  width: 300px !important;
+  width: 30vw !important;
   flex-shrink: 0;
   height: auto;
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -29,20 +29,22 @@
 }
 
 .baseSlideStyle, .activeSlideStyle {
+  height: 100%;
   width: 100%;
-  min-height: 400px;
   border-radius: 18px;
   display: flex;
-  padding: 25px;
+  padding: 20px;
   box-sizing: border-box;
-  font-size: 1.8rem;
+  font-size: auto-clamp(20, 36);
   font-weight: 600;
   color: #222;
   text-align: center;
-  justify-content: center;
   align-items: center;
   transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
   transform-origin: center center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .baseSlideStyle {
@@ -53,6 +55,21 @@
 .activeSlideStyle {
   background-color: #00FF00;
   transform: scale(1);
+}
+
+.slideImage {
+  filter: grayscale(1);
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.slideDesc {
+  font-family: "IstokWebBold";
+  width: 100%;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 15px;
 }
 
 @media screen and (max-width: 720px) {
@@ -68,5 +85,4 @@
   .baseSlideStyle {
     transform: scale(1);
   }
-
 }

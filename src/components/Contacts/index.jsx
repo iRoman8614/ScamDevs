@@ -4,8 +4,12 @@ import MirrorExpandingCircle from "@/components/ui/ExpandingCircle/MirrorExpandi
 import NavbarStatic from "@/components/navbar/NavbarStatic";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 export const Contacts = () => {
+    const { t } = useTranslation();
+
     return(
         <section id='contact'>
             <NavbarStatic type={'contact'}/>
@@ -14,17 +18,17 @@ export const Contacts = () => {
             <div className={styles.contactsBlock}>
                 <div className={styles.contactsTitle}>contact us</div>
                 <div className={styles.contactsWhitePaper}>
-                    Got an idea? Need a dev team that actually gets it? Whether it’s a new app, a custom platform, or just some solid tech advice, we’re here to help.
+                    {t('contacts.contactText')}
                     <br/><br/>
-                    <p>Drop us a message, and let’s make things happen.</p>
+                    <p>{t('contacts.contactTextBold')}</p>
                 </div>
             </div>
             <div className={styles.contactsPointList}>
-                <Link href={'https://t.me/scam_devs'} className={styles.line}>
+                <Link href={'https://t.me/scam_devs'} target="_blank" rel="noopener noreferrer" className={styles.line}>
                     <Image src={'/telegramLogo.webp'} alt={''} width={50} height={50} />
                     <MirrorExpandingCircle text={'TG: @scam_devs'} />
                 </Link>
-                <Link href={'https://www.linkedin.com/groups/10066625/'} className={styles.line}>
+                <Link href={'https://www.linkedin.com/groups/10066625/'} target="_blank" rel="noopener noreferrer" className={styles.line}>
                     <Image src={'/linkedinLogo.webp'} alt={''} width={50} height={50} />
                     <MirrorExpandingCircle text={'LINKD: @scam_devs'} />
                 </Link>

@@ -6,7 +6,12 @@ import NavbarStatic from "@/components/navbar/NavbarStatic";
 const logo = '/logo.svg'
 const miniLogo = '/sdminilogo.svg'
 
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
+
 export const About = () => {
+    const { t } = useTranslation();
+
     return(
         <section id='about'>
             <NavbarStatic type={'about'}/>
