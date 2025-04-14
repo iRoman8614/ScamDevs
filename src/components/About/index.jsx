@@ -20,19 +20,18 @@ export const About = () => {
                 <div>
                     <div className={styles.textCloud} />
                     <div className={styles.aboutText}>
-                        We’re a team of tech geeks who live for turning wild ideas into real, working products. Whether it’s Web3, fintech, or entertainment, we’re all about pushing the boundaries and making things happen.
+                        {t('about.about1')}
                         <br/><br/>
-                        We don’t do things the boring way. We build fast, think outside the box, and create products that are smart, simple, and actually fun to use.
+                        {t('about.about2')}
                         <br/><br/>
-                        If you've got an idea that’s a little out there, we’re the team to bring it to life.
+                        {t('about.about3')}
                     </div>
                 </div>
                 <div className={styles.swiperBlock}>
                     <div>
                         <div className={styles.swiperCloudGreen} />
                         <div className={styles.swiperCloud}>
-                            GOT A GAME-CHANGING
-                            CONCEPT? LETS MAKE IT LEGENDARY!
+                            {t('about.LEGENDARY')}
                         </div>
                     </div>
                     <div className={styles.swiper}>

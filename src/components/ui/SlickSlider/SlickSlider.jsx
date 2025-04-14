@@ -6,18 +6,22 @@ import 'swiper/css';
 
 import styles from './SlickSlider.module.scss';
 import Image from "next/image";
+import {useTranslation} from "react-i18next";
+import i18n from '../../../i18n';
 
-const slideData = [
-    { id: 0, content: 'Активный 1', image: '/Anton.png', name: "Anton", role: "Product Manager"},
-    { id: 1, content: 'Слайд 2', image: '/nda.png', name: "Eugene", role: "Business analyst"},
-    { id: 2, content: 'Слайд 3', image: '/nda.png', name: "Ivan", role: "UX/UI designer"},
-    { id: 3, content: 'Слайд 4', image: '/Nickolay.png', name: "Nickolay", role: "Product Manager"},
-    { id: 4, content: 'Слайд 5', image: '/Roman.png', name: "Roman", role: "Full-stack developer"},
-];
 
 const DesktopLeftLoopSwiper = () => {
+    const { t } = useTranslation();
     const swiperRef = useRef(null);
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const slideData = [
+        { id: 0, content: 'Активный 1', image: '/Anton.png', name: `${t("about.Anton")}`, role: "Product Manager"},
+        { id: 1, content: 'Слайд 2', image: '/eugene.png', name: `${t("about.Eugene")}`, role: "Business analyst"},
+        { id: 2, content: 'Слайд 3', image: '/nda.png', name:  `${t("about.Ivan")}`, role: "UX/UI designer"},
+        { id: 3, content: 'Слайд 4', image: '/Nickolay.png', name: `${t("about.Nickolay")}` , role: "Product Manager"},
+        { id: 4, content: 'Слайд 5', image: '/Roman.png', name: `${t("about.Roman")}`, role: "Full-stack developer"},
+    ];
 
     const handleSwiperInit = (swiperInstance) => {
         swiperRef.current = swiperInstance;
