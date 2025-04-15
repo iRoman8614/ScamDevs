@@ -7,11 +7,11 @@ export async function POST(request) {
         if (!name || !email || !message) {
             return NextResponse.json({ success: false, message: 'Missing required fields' }, { status: 400 });
         }
-        const botToken = '7744594697:AAHw3oSORx-BXn-ATVusYI0lFb2TGAEhIPk';
-        const chatId = '-1002623200452';
+        const bt = '7744594697:AAHw3oSORx-BXn-ATVusYI0lFb2TGAEhIPk';
+        const chatId = '-1002447898643';
         const text = `<b>Новое сообщение:</b>\n\n<b>Имя:</b> ${name}\n<b>Email:</b> ${email}\n\n<b>Сообщение:</b>\n${message}`;
         const response = await fetch(
-            `https://api.telegram.org/bot${botToken}/sendMessage`,
+            `https://api.telegram.org/bot${bt}/sendMessage`,
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

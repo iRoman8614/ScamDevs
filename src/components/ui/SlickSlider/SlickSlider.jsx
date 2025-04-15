@@ -17,7 +17,7 @@ const DesktopLeftLoopSwiper = () => {
 
     const slideData = [
         { id: 0, content: 'Активный 1', image: '/Anton.png', name: `${t("about.Anton")}`, role: "Product Manager"},
-        { id: 1, content: 'Слайд 2', image: '/eugene.png', name: `${t("about.Eugene")}`, role: "Business analyst"},
+        { id: 1, content: 'Слайд 2', image: '/Eugene.png', name: `${t("about.Eugene")}`, role: "Business analyst"},
         { id: 2, content: 'Слайд 3', image: '/nda.png', name:  `${t("about.Ivan")}`, role: "UX/UI designer"},
         { id: 3, content: 'Слайд 4', image: '/Nickolay.png', name: `${t("about.Nickolay")}` , role: "Product Manager"},
         { id: 4, content: 'Слайд 5', image: '/Roman.png', name: `${t("about.Roman")}`, role: "Full-stack developer"},
@@ -44,11 +44,11 @@ const DesktopLeftLoopSwiper = () => {
                 slidesPerView={1}
                 centeredSlides={true}
                 navigation={false}
-                // autoplay={{
-                //     delay: 4000,
-                //     disableOnInteraction: false,
-                //     pauseOnMouseEnter: true,
-                // }}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                }}
                 breakpoints={{
                     720: {
                         slidesPerView: 'auto',
