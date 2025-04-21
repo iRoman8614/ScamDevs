@@ -18,6 +18,38 @@
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.swiperBtnPrev, .swiperBtnNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #00FF47;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.swiperBtnPrev {
+  padding: 10px 15px 10px 10px;
+}
+
+.swiperBtnSet {
+  z-index: 100;
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.mySwiper {
+  position: relative;
+}
+
 @media (min-width: 1024px) {
   .swiperSlide.swiper-slide-active {
     width: 480px !important;
@@ -84,5 +116,8 @@
   }
   .baseSlideStyle {
     transform: scale(1);
+  }
+  .swiperBtnSet {
+    width: 100%;
   }
 }
