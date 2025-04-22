@@ -18,10 +18,11 @@ const DesktopLeftLoopSwiper = () => {
     const slideData = [
         { id: 0, content: 'Слайд 1', image: '/Anton.png', name: `${t("about.Anton")}`, role: "Product Manager"},
         { id: 1, content: 'Слайд 2', image: '/Roman.png', name: `${t("about.Roman")}`, role: "Full-stack Developer"},
-        { id: 2, content: 'Слайд 3', image: '/Ivan.png', name:  `${t("about.Ivan")}`, role: "UX/UI Designer"},
-        { id: 3, content: 'Слайд 4', image: '/Valeri.png', name: `${t("about.Valeri")}`, role: "QA Engineer"},
-        { id: 4, content: 'Слайд 5', image: '/Nickolay.png', name: `${t("about.Nickolay")}` , role: "Product Manager"},
-        { id: 5, content: 'Слайд 6', image: '/Mironov.png', name: `${t("about.Valerii")}`, role: "Content Manager"},
+        { id: 2, content: 'Слайд 3', image: '/valvdov.png', name: `${t("about.Valerii")}`, role: "Full-stack Developer"},
+        { id: 3, content: 'Слайд 4', image: '/Ivan.png', name:  `${t("about.Ivan")}`, role: "UX/UI Designer"},
+        { id: 4, content: 'Слайд 5', image: '/Valeri.png', name: `${t("about.Valeri")}`, role: "QA Engineer"},
+        { id: 5, content: 'Слайд 6', image: '/Nickolay.png', name: `${t("about.Nickolay")}` , role: "Product Manager"},
+        { id: 6, content: 'Слайд 7', image: '/Mironov.png', name: `${t("about.Valerii")}`, role: "Content Manager"},
     ];
 
     const handleSwiperInit = (swiperInstance) => {
