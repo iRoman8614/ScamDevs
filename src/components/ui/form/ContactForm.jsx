@@ -33,7 +33,7 @@ const ContactForm = () => {
     return (
         <>
             <form className={styles.contactForm} onSubmit={handleSubmit(onSubmit)}>
-                <h2 className={styles.title}>GET IN TOUCH</h2>
+                <h2 className={styles.title}>{t('contacts.GETINTOUCH')}</h2>
                 <input
                     type="text"
                     placeholder={t('contacts.name')}

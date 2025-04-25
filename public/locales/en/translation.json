@@ -50,6 +50,7 @@
     "4weeks": "4 weeks."
   },
   "contacts": {
+    "contactUs": "CONTACT US",
     "GETINTOUCH": "GET IN TOUCH",
     "name": "name",
     "nameError": "Name is required",

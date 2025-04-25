@@ -61,12 +61,27 @@
 }
 
 .line {
+  color: #FFFFFF;
   width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
   cursor: pointer;
+}
+
+.social {
+  font-family: 'IstokWebBold';
+  text-align: left;
+  font-size: auto-clamp(18, 40);
+  align-self: center;
+}
+
+.socialImage {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  object-fit: contain;
 }
 
 @media screen and (max-width: 720px) {
