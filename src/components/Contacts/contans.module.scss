@@ -4,7 +4,7 @@
   border-radius: 18px;
   background-color: black;
   padding: 80px 60px;
-  margin-bottom: 150px;
+  margin-bottom: auto-clamp(50, 150);
   color: #FFFFFF;
 }
 

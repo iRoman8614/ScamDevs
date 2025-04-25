@@ -251,7 +251,7 @@
   background: #00FF47;
   border-radius: 18px;
   width: 90%;
-  margin: -300px auto 100px auto;
+  margin: -300px auto auto-clamp(30, 100) auto;
   padding: auto-clamp(30, 100) auto-clamp(20, 80);
 }
 
