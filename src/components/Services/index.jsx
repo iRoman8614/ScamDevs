@@ -155,6 +155,7 @@ export const Services = () => {
                             <div className={styles.whyTextSlider}>
                                 <p className={styles.whyTextBoldLine}>{t('services.WhyMiniApps')}</p>
                                 <p>{t('services.WhyMiniAppsText')}</p>
+                                <p>{t('services.WhyMiniAppsText2')}</p>
                             </div>
                             <div className={styles.whyTextSlider}>
                                 <p className={styles.whyTextBoldLine}>{t('services.OurExpertise')}</p>
