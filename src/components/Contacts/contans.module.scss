@@ -46,6 +46,10 @@
   padding: auto-clamp(15, 60);
   font-size: auto-clamp(20, 40);
   text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
 
   p {
     padding: 0;
