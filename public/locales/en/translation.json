@@ -66,7 +66,11 @@
     "contactTextBold": "Drop us a message, and let’s make things happen."
   },
   "about": {
-    "about1": "We’re a team of tech geeks who live for turning wild ideas into real, working products. Whether it’s Web3, fintech, or entertainment, we’re all about pushing the boundaries and making things happen.\nWe don’t do things the boring way. We build fast, think outside the box, and create products that are smart, simple, and actually fun to use.\nIf you've got an idea that’s a little out there, we’re the team to bring it to life.",
+    "about1": "We’re a team of tech geeks who live for turning wild ideas into real, working products. Whether it’s Web3, fintech, or entertainment, we’re all about pushing the boundaries and making things happen.",
+    "about2": "",
+    "about3": "We don’t do things the boring way. We build fast, think outside the box, and create products that are smart, simple, and actually fun to use.",
+    "about4": "",
+    "about5": "If you've got an idea that’s a little out there, we’re the team to bring it to life.",
     "LEGENDARY": "GOT A GAME-CHANGING CONCEPT? LETS MAKE IT LEGENDARY!",
     "Roman": "Roman",
     "Anton": "Anton",

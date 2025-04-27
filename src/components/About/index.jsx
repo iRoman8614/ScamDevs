@@ -20,7 +20,11 @@ export const About = () => {
                 <div>
                     <div className={styles.textCloud} />
                     <div className={styles.aboutText}>
-                        {t('about.about1')}
+                        {t('about.about1')}<br/>
+                        {t('about.about2')}<br/>
+                        {t('about.about3')}<br/>
+                        {t('about.about4')}<br/>
+                        {t('about.about5')}
                     </div>
                 </div>
                 <div className={styles.swiperBlock}>
