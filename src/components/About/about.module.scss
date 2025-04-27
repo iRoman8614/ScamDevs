@@ -23,12 +23,13 @@
   padding: 40px 80px;
   border-radius: 12px;
   font-size: auto-clamp(20, 40);
-  text-align: justify;
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  text-align-last: left;
+  text-align: left;
+  //text-align: justify;
+  //hyphens: auto;
+  //-webkit-hyphens: auto;
+  //-moz-hyphens: auto;
+  //-ms-hyphens: auto;
+  //text-align-last: left;
   // 4. (Опционально) Дополнительное управление переносом, если hyphens недостаточно
   // Используйте с осторожностью, так как может ломать слова в нежелательных местах,
   // если 'hyphens: auto' не сработает (например, нет словарей в браузере).

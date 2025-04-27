@@ -50,13 +50,14 @@
 .projectDescription {
   font-size: auto-clamp(20, 40);
   align-self: center;
-  text-align: justify;
+  text-align: left;
+  //text-align: justify;
   padding-left: auto-clamp(0, 40);
-  hyphens: auto;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  text-align-last: left;
+  //hyphens: auto;
+  //-webkit-hyphens: auto;
+  //-moz-hyphens: auto;
+  //-ms-hyphens: auto;
+  //text-align-last: left;
   // 4. (Опционально) Дополнительное управление переносом, если hyphens недостаточно
   // Используйте с осторожностью, так как может ломать слова в нежелательных местах,
   // если 'hyphens: auto' не сработает (например, нет словарей в браузере).
