@@ -1,31 +1,54 @@
-// src/utils/i18n.js
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import HttpApi from 'i18next-http-backend';
+import resourcesToBackend from 'i18next-resources-to-backend';
 
-const initTranslations = async (locale, namespaces, instance = i18n) => {
-    const i18nInstance = instance || i18n.createInstance();
+export const SUPPORTED_LANGUAGES = ['en', 'ru'];
+export const DEFAULT_LANGUAGE = 'en';
+export const COOKIE_NAME = 'i18next_lang';
 
-    if (!i18nInstance.isInitialized) {
-        try {
-            await i18nInstance
-                .use(initReactI18next)
-                .use(HttpApi)
-                .init({
-                    lng: locale,
-                    fallbackLng: 'en',
-                    ns: namespaces || ['translation'],
-                    defaultNS: 'translation',
-                    debug: true,
-                    interpolation: { escapeValue: false },
-                    backend: { loadPath: '/locales/{{lng}}/{{ns}}.json' },
-                });
-        } catch (error) {
-            console.error("Failed to initialize i18next:", error);
-            throw error;
-        }
-    }
-    return i18nInstance;
+const i18nextBaseConfig = {
+    fallbackLng: DEFAULT_LANGUAGE,
+    defaultNS: 'translation',
+    ns: ['translation'],
+    interpolation: { escapeValue: false },
+    supportedLngs: SUPPORTED_LANGUAGES,
 };
 
-export default initTranslations;
+export const getTranslations = async (locale, namespaces = ['translation'], i18nInstance) => {
+    const instance = i18nInstance || i18n.createInstance();
+
+    if (!instance.isInitialized) {
+        instance
+            .use(resourcesToBackend((language, namespace) => import(`../../public/locales/${language}/${namespace}.json`)))
+        await instance.init({
+            ...i18nextBaseConfig,
+            lng: locale,
+            ns: namespaces,
+        });
+    } else {
+        if (instance.language !== locale) {
+            await instance.changeLanguage(locale);
+        }
+        await instance.loadNamespaces(namespaces);
+    }
+
+    return {
+        t: instance.t,
+        resources: instance.store.data,
+        locale: instance.language,
+    };
+};
+
+export const createClientI18nInstance = (locale, namespaces, resources) => {
+    const { initReactI18next } = require('react-i18next');
+
+    const instance = i18n.createInstance();
+    instance
+        .use(initReactI18next)
+        .init({
+            ...i18nextBaseConfig,
+            lng: locale,
+            ns: namespaces,
+            resources: resources,
+        });
+    return instance;
+};

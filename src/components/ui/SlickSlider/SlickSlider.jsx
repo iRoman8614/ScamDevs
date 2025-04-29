@@ -7,7 +7,6 @@ import 'swiper/css';
 import styles from './SlickSlider.module.scss';
 import Image from "next/image";
 import {useTranslation} from "react-i18next";
-import i18n from '../../../i18n';
 
 
 const DesktopLeftLoopSwiper = () => {

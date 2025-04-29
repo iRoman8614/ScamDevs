@@ -7,14 +7,14 @@
   },
   "services": {
     "offer": "we offer",
-    "offerText": "Off-the-Beaten-Track Telegram Solutions for your business. We design,build and lead unique, powerful apps to grow your business inside Telegram.",
+    "offerText": "Off-the-Beaten-Track Telegram Solutions for your business. We design, build and lead unique, powerful apps to grow your business inside Telegram.",
     "why": "why",
     "WhyTMA": "Why use TMA?",
     "why1": "• Allows you to retain users active on Telegram",
     "why2": "• Creating TMA is cheaper than mobile development",
     "why3": "• No app store restrictions",
     "why4": "• Ease of use increases sales and brand awareness",
-    "tma": "TMA - grow your business inside Telegram",
+    "tma": "TMA: grow your business inside Telegram",
     "tmaText": "Turn Telegram into a powerful traffic tool with TMA without complex mobile development. We'll help you create a cool app tailored to your business needs.",
     "ModernDesign": "Trendy design",
     "UserDriven": "Wide functionality",
@@ -63,7 +63,7 @@
     "sentError": "Failed to send message.",
     "SENDIT": "SEND IT",
     "contact": "contact us",
-    "contactText": "Do you have an idea? Do you need a development team to realize it? Whether it's about a new product, an original design or just technical advice, we are ready to help!",
+    "contactText": "Do you have an idea? Do you need a development team to implement it? Whether it's about a new product, an original design or just technical advice, we are ready to help!",
     "contactTextBold": "Drop us a message, and let’s make things happen."
   },
   "about": {

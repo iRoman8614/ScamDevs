@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import styles from './HoverExpandCircles.module.scss';
 
 import { useTranslation } from 'react-i18next';
-import i18n from '../../../i18n';
 
 export default function HoverExpandCircles() {
     const { t } = useTranslation();

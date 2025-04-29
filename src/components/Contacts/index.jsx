@@ -5,7 +5,6 @@ import NavbarStatic from "@/components/navbar/NavbarStatic";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
 
 export const Contacts = () => {
     const { t } = useTranslation();

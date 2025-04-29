@@ -35,7 +35,7 @@
   line-height: auto-clamp(30, 98);
   text-transform: uppercase;
   text-align: right;
-  margin: 0 20px auto-clamp(-8, -245) 0;
+  margin: 0 20px auto-clamp(-7, -245) 0;
 }
 
 .offerText {
@@ -206,6 +206,10 @@
   background: #00FF47;
   margin: 0 0 -100px auto;
   z-index: 2;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 }
 
 .whyGreenCloud2 {
@@ -218,6 +222,10 @@
   background: #00FF47;
   margin: 0 0 -100px auto;
   z-index: 2;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 }
 
 .whyPointsList {
