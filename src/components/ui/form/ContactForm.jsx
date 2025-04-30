@@ -48,6 +48,30 @@ const ContactForm = () => {
                     className={styles.inputEmail}
                 />
                 {errors.email && <p className={styles.error}>{errors.email.message}</p>}
+                <input
+                    type="text"
+                    placeholder={t('contacts.telegram')}
+                    {...register("telegram", {
+                        pattern: {
+                            value: /^@(?:[a-zA-Z0-9_]){1,32}$/,
+                            message: `${t('contacts.telegramPatternError')}`
+                        }
+                    })}
+                    className={styles.inputName}
+                />
+                {errors.telegram && <p className={styles.error}>{errors.telegram.message}</p>}
+                <input
+                    type="text"
+                    placeholder={t('contacts.phone')}
+                    {...register("phone", {
+                        pattern: {
+                            value: /^\+\d{7,15}$/,
+                            message: `${t('contacts.phonePatternError')}`
+                        }
+                    })}
+                    className={styles.inputEmail}
+                />
+                {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
                 <textarea
                     placeholder={t('contacts.message')}
                     {...register("message", { required: `${t('contacts.messageError')}` })}

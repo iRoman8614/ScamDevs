@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request) {
     try {
-        const { name, email, message } = await request.json();
+        const { name, email, message, telegram, phone } = await request.json();
         if (!name || !email || !message) {
             return NextResponse.json({ success: false, message: 'Missing required fields' }, { status: 400 });
         }
@@ -15,7 +15,7 @@ export async function POST(request) {
             return NextResponse.json({ success: false, message: 'Ошибка конфигурации сервера' }, { status: 500 });
         }
 
-        const text = `<b>Новое сообщение:</b>\n\n<b>Имя:</b> ${name}\n<b>Email:</b> ${email}\n\n<b>Сообщение:</b>\n${message}`;
+        const text = `<b>Новое сообщение:</b>\n\n<b>Имя:</b> ${name}\n<b>Telegram:</b> ${telegram}\n<b>Номер:</b> ${phone}\n<b>Email:</b> ${email}\n\n<b>Сообщение:</b>\n${message}`;
         const response = await fetch(
             `https://api.telegram.org/bot${botToken}/sendMessage`,
             {
