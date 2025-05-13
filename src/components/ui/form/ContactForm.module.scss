@@ -1,6 +1,7 @@
 @import '../../../app/_utils';
 
 .contactForm {
+  max-width: 1100px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -19,7 +20,7 @@
   margin: 0 80px auto-clamp(-7, -45) auto;
 }
 
-.input, .inputName, .inputEmail, .textarea {
+.input, .inputName, .inputEmail, .textareaContainer {
   display: block;
   width: 95%;
   padding: 15px;
@@ -34,7 +35,21 @@
   transition: transform 2s ease;
 }
 
-.inputName, .textarea {
+.charCounter {
+  margin-left: auto;
+  color: gray;
+}
+
+.textarea {
+  border: none;
+  width: 100%;
+  font-size: auto-clamp(20, 32);
+  color: black;
+  background: white;
+  outline: none;
+}
+
+.inputName, .textareaContainer {
   transform: translateX(0%);
   &:hover {
     transform: translateX(5%);

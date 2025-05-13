@@ -1,20 +1,26 @@
 import styles from "./ContactForm.module.scss";
 import { useForm } from "react-hook-form";
-import {useState} from "react";
+import { useState } from "react";
 import axios from 'axios';
 
 import { useTranslation } from 'react-i18next';
 
+const MAX_MESSAGE_LENGTH = 500;
 
 const ContactForm = () => {
     const { t } = useTranslation();
-    const [message, setMessage] = useState()
+    const [message, setMessage] = useState();
 
     const {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+        watch,
+    } = useForm({
+        mode: "onChange"
+    });
+
+    const messageValue = watch("message", "");
 
     const onSubmit = async (data) => {
         try {
@@ -44,7 +50,13 @@ const ContactForm = () => {
                 <input
                     type="email"
                     placeholder={t('contacts.mail')}
-                    {...register("email", { required: `${t('contacts.mailError')}`, pattern: /^\S+@\S+\.\S+$/ })}
+                    {...register("email", {
+                        required: `${t('contacts.mailError')}`,
+                        pattern: {
+                            value: /^\S+@\S+\.\S+$/,
+                            message: `${t('contacts.mailPatternError')}`
+                        }
+                    })}
                     className={styles.inputEmail}
                 />
                 {errors.email && <p className={styles.error}>{errors.email.message}</p>}
@@ -72,15 +84,27 @@ const ContactForm = () => {
                     className={styles.inputEmail}
                 />
                 {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
-                <textarea
-                    placeholder={t('contacts.message')}
-                    {...register("message", { required: `${t('contacts.messageError')}` })}
-                    className={styles.textarea}
-                />
+                <div className={styles.textareaContainer}>
+                    <textarea
+                        placeholder={t('contacts.message')}
+                        {...register("message", {
+                            required: `${t('contacts.messageError')}`,
+                            maxLength: {
+                                value: MAX_MESSAGE_LENGTH,
+                                message: `${t('contacts.messageMaxLengthError', { maxLength: MAX_MESSAGE_LENGTH })}`
+                            }
+                        })}
+                        className={styles.textarea}
+                    />
+                    <div className={styles.charCounter}>
+                        {messageValue?.length || 0}/{MAX_MESSAGE_LENGTH}
+                    </div>
+                </div>
                 {errors.message && <p className={styles.error}>{errors.message.message}</p>}
+
                 <button type="submit" className={styles.button}>{t('contacts.SENDIT')}</button>
             </form>
-            {message !== null && message !== undefined && <div>{message}</div>}
+            {message !== null && message !== undefined && <div className={styles.formMessage}>{message}</div>} {/* Добавил класс для стилизации сообщения */}
         </>
     );
 };
