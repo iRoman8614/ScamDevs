@@ -153,3 +153,52 @@
   bottom: 15%;
   right: 5%;
 }
+
+.createBtn {
+  position: absolute;
+  top: 25%;
+  right: auto-clamp(0, 380);
+  text-decoration: none;
+
+  @media screen and (max-width: 600px) {
+    scale: 0.8;
+  }
+}
+
+.create {
+  width: fit-content;
+  background: #FF67C2;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-family: IstokWebBold;
+  font-size: auto-clamp(26, 70);
+  padding: auto-clamp(3, 8) auto-clamp(40, 150) auto-clamp(5, 10) auto-clamp(20, 45);
+  cursor: pointer;
+}
+
+.now {
+  margin-left: auto-clamp(40, 130);
+  background: #FF67C2;
+  border-radius: 12px;
+  color: #FFFFFF;
+  width: fit-content;
+  font-family: IstokWebBold;
+  margin-top: -20px;
+  font-size: auto-clamp(16, 50);
+  padding: auto-clamp(8, 15) auto-clamp(15, 30) auto-clamp(3, 10) auto-clamp(30, 90);
+  cursor: pointer;
+}
+//
+//.createArrow{
+//  rotate: -45deg;
+//  margin-left: auto-clamp(150, 190);
+//  width: auto-clamp(20, 50);
+//  height: auto-clamp(45, 120);
+//  position: absolute;
+//  bottom: 5%;
+//  right: 5%;
+//
+//  @media screen and (max-width: 600px) {
+//    display: none;
+//  }
+//}

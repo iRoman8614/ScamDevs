@@ -38,7 +38,7 @@ const ContactForm = () => {
 
     return (
         <>
-            <form className={styles.contactForm} onSubmit={handleSubmit(onSubmit)}>
+            <form className={styles.contactForm} onSubmit={handleSubmit(onSubmit)} id={'form'}>
                 <h2 className={styles.title}>{t('contacts.GETINTOUCH')}</h2>
                 <input
                     type="text"
