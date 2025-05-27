@@ -35,7 +35,8 @@
   line-height: auto-clamp(30, 98);
   text-transform: uppercase;
   text-align: right;
-  margin: 0 20px auto-clamp(-7, -245) 0;
+  //margin: 0 20px auto-clamp(-7, -245) 0;
+  margin: 0 20px 0 0;
 }
 
 .offerText {
@@ -47,7 +48,8 @@
   text-align: left;
   padding: 30px 40px;
   margin-bottom: 100px;
-  margin-top: -20px;
+  //margin-top: -20px;
+  margin-top: 0px;
   //hyphens: auto;
   //-webkit-hyphens: auto;
   //-moz-hyphens: auto;
@@ -115,7 +117,8 @@
   line-height: auto-clamp(30, 98);
   text-transform: uppercase;
   text-align: left;
-  margin: 0 20px auto-clamp(-8, -45) auto-clamp(40, 220);
+  //margin: 0 20px auto-clamp(-8, -45) auto-clamp(40, 220);
+  margin: 0 20px 0 auto-clamp(40, 220);
 }
 
 .whyGroup {
@@ -132,7 +135,8 @@
   padding: 30px 40px;
   z-index: 2;
   width: 80%;
-  margin: -20px auto 0 auto;
+  //margin: -20px auto 0 auto;
+  margin: 0 auto -3px auto;
 
 
   p {

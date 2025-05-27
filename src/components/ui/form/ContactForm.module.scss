@@ -17,7 +17,8 @@
   line-height: auto-clamp(30, 98);
   text-transform: uppercase;
   text-align: right;
-  margin: 0 80px auto-clamp(-7, -45) auto;
+  //margin: 0 80px auto-clamp(-7, -45) auto;
+  margin: 0 80px 0 auto;
 }
 
 .input, .inputName, .inputEmail, .textareaContainer {

@@ -5,6 +5,10 @@
     "contacts": "contacts",
     "about": "about"
   },
+  "header": {
+    "create": "create",
+    "now": "now"
+  },
   "services": {
     "offer": "we offer",
     "offerText": "Off-the-Beaten-Track Telegram Solutions for your business. We design, build and lead unique, powerful apps to grow your business inside Telegram.",

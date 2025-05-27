@@ -139,40 +139,40 @@ export const Services = () => {
                     </div>
                 </div>
             </div>
-            <div id="slidingBlock" className={isVisible ? styles.longSlideBlock : styles.shortSlideBlock}></div>
-            <div className={isVisible ? styles.visible : styles.hiddenSlide}>
-                <div className={styles.lightGreenCloud} />
-                <div
-                    className={styles.slidingBlock}
-                >
-                    <div>
-                        <div className={styles.slidingWhiteCloud1} />
-                        <div className={styles.slidingWhiteCloud2} />
-                        <div className={styles.slidingWhiteCloud3} />
-                    </div>
-                    <div className={styles.slidingText}>
-                        <div>
-                            <div className={styles.whyTextSlider}>
-                                <p className={styles.whyTextBoldLine}>{t('services.WhyMiniApps')}</p>
-                                <p>{t('services.WhyMiniAppsText')}</p>
-                                <p>{t('services.WhyMiniAppsText2')}</p>
-                            </div>
-                            <div className={styles.whyTextSlider}>
-                                <p className={styles.whyTextBoldLine}>{t('services.OurExpertise')}</p>
-                                <p>{t('services.OurExpertiseText')}</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div className={styles.slidingGreenCloud1} />
-                            <div className={styles.slidingGreenCloud2} />
-                            <div className={styles.slidingGreenCloud3} />
-                            <div className={styles.slidingGreenCloud4} />
-                            <div className={styles.slidingGreenCloud5} />
-                            <div className={styles.slidingGreenCloud6} />
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {/*<div id="slidingBlock" className={isVisible ? styles.longSlideBlock : styles.shortSlideBlock}></div>*/}
+            {/*<div className={isVisible ? styles.visible : styles.hiddenSlide}>*/}
+            {/*    <div className={styles.lightGreenCloud} />*/}
+            {/*    <div*/}
+            {/*        className={styles.slidingBlock}*/}
+            {/*    >*/}
+            {/*        <div>*/}
+            {/*            <div className={styles.slidingWhiteCloud1} />*/}
+            {/*            <div className={styles.slidingWhiteCloud2} />*/}
+            {/*            <div className={styles.slidingWhiteCloud3} />*/}
+            {/*        </div>*/}
+            {/*        <div className={styles.slidingText}>*/}
+            {/*            <div>*/}
+            {/*                <div className={styles.whyTextSlider}>*/}
+            {/*                    <p className={styles.whyTextBoldLine}>{t('services.WhyMiniApps')}</p>*/}
+            {/*                    <p>{t('services.WhyMiniAppsText')}</p>*/}
+            {/*                    <p>{t('services.WhyMiniAppsText2')}</p>*/}
+            {/*                </div>*/}
+            {/*                <div className={styles.whyTextSlider}>*/}
+            {/*                    <p className={styles.whyTextBoldLine}>{t('services.OurExpertise')}</p>*/}
+            {/*                    <p>{t('services.OurExpertiseText')}</p>*/}
+            {/*                </div>*/}
+            {/*            </div>*/}
+            {/*            <div>*/}
+            {/*                <div className={styles.slidingGreenCloud1} />*/}
+            {/*                <div className={styles.slidingGreenCloud2} />*/}
+            {/*                <div className={styles.slidingGreenCloud3} />*/}
+            {/*                <div className={styles.slidingGreenCloud4} />*/}
+            {/*                <div className={styles.slidingGreenCloud5} />*/}
+            {/*                <div className={styles.slidingGreenCloud6} />*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
         </section>
     )
 }

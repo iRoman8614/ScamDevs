@@ -7,8 +7,10 @@ import Link from "next/link";
 const Plain = '/tgPlain.svg'
 const Lottie = dynamic(() => import('react-lottie'), { ssr: false });
 const Arrow = '/CreateArrow.svg'
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
+    const { t } = useTranslation();
     const [planeStyle, setPlaneStyle] = useState({ transform: 'translate(0, 0)' });
     useEffect(() => {
         const handleScroll = () => {
@@ -68,10 +70,10 @@ export const Header = () => {
                 <div className={styles.pinkPixel2}></div>
                 <div className={styles.pinkPixel3}></div>
                 <Link href={'/#form'} className={styles.createBtn}>
-                    <div className={styles.create}>create</div>
-                    <div className={styles.now}>now</div>
+                    <div className={styles.create}>{t('header.create')}</div>
+                    <div className={styles.now}>{t('header.now')}</div>
                 </Link>
-                <Image className={styles.createArrow} src={Arrow} alt={'tg'} width={40} height={100} />
+                {/*<Image className={styles.createArrow} src={Arrow} alt={'tg'} width={40} height={100} />*/}
                 <div className={styles.pinkPixel4}></div>
                 <div className={styles.pinkPixel5}></div>
             </div>

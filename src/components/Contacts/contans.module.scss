@@ -33,7 +33,8 @@
   line-height: auto-clamp(26, 90);
   text-transform: uppercase;
   text-align: right;
-  margin: 0 80px auto-clamp(-8, -50) auto;
+  //margin: 0 80px auto-clamp(-8, -50) auto;
+  margin: 0 80px 0 auto;
 }
 
 .contactsWhitePaper {
@@ -41,7 +42,8 @@
   height: auto;
   background: #FFFFFF;
   border-radius: 18px;
-  margin-top: -17px;
+  //margin-top: -17px;
+  margin-top: 0;
   color: black;
   padding: auto-clamp(15, 60);
   font-size: auto-clamp(20, 40);
